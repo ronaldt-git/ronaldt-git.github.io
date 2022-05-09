@@ -253,7 +253,8 @@ a:focus {
 }
 
 .download-section {
-    width: 100%;
+    width: 90%;
+    height: 90%;
     padding: 200px 0;
     color: #fff;
     border-radius: 20px;
