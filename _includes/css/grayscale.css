@@ -138,7 +138,7 @@ a:focus {
     padding: 200px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/opZombieIcon2048.png) no-repeat bottom center scroll;
+    background: url(/img/opZOfficialJPGicon.jpg) no-repeat bottom center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
