@@ -256,6 +256,8 @@ a:focus {
     width: 100%;
     padding: 200px 0;
     color: #fff;
+    border-radius: 20px;
+    border: 5px solid #d3d3d3;
     background: url(/img/DownloadsImage.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
