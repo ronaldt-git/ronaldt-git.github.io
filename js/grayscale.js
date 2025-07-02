@@ -25,9 +25,11 @@ $(function() {
 });
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+// Only collapse menu on click if it's NOT a dropdown toggle
+$('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
 
 // remove the focused state after click,
 // otherwise bootstrap will still highlight the link
