@@ -365,3 +365,10 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+/* Fix for mobile dropdown being cut off in collapsed navbar */
+.navbar-collapse.in {
+  overflow-y: visible;
+  max-height: none;
+}
+
