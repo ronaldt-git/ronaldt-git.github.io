@@ -17,22 +17,26 @@
           return $('.navbar-toggle').is(':visible');
         };
     
+        // Prevent collapse menu from closing on dropdown toggle
+        $('.navbar-collapse .dropdown-toggle').click(function (e) {
+          if (isMobile()) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        });
+    
+        // Custom dropdown toggle behavior
         $('.dropdown-toggle').click(function (e) {
           var $el = $(this).next('.dropdown-menu');
     
           if (isMobile()) {
-            e.preventDefault();
-            e.stopPropagation();
-    
             // Close other dropdowns
             $('.dropdown-menu').not($el).slideUp(200);
-    
-            // Toggle current dropdown
             $el.stop(true, true).slideToggle(200);
           }
         });
     
-        // Close dropdowns when clicking outside
+        // Close dropdowns when tapping outside
         $(document).click(function (e) {
           if (!$(e.target).closest('.navbar').length) {
             $('.dropdown-menu').slideUp(200);
