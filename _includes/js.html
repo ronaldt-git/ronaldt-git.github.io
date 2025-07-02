@@ -12,24 +12,32 @@
 
     <!-- Fix mobile dropdown menu behavior for Bootstrap 3 -->
     <script>
-      $(document).on('click', '.navbar-collapse.in .dropdown-toggle', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
+      $(function () {
+        var isMobile = function () {
+          return $('.navbar-toggle').is(':visible');
+        };
     
-        var $parent = $(this).parent();
-        var $submenu = $parent.find('.dropdown-menu');
+        $('.dropdown-toggle').click(function (e) {
+          var $el = $(this).next('.dropdown-menu');
     
-        if ($submenu.is(':visible')) {
-          $submenu.slideUp(200);
-        } else {
-          $('.dropdown-menu').slideUp(200);
-          $submenu.slideDown(200);
-        }
-      });
+          if (isMobile()) {
+            e.preventDefault();
+            e.stopPropagation();
     
-      $(document).on('click', function(e) {
-        if (!$(e.target).closest('.dropdown-menu').length && !$(e.target).closest('.dropdown-toggle').length) {
-          $('.dropdown-menu').slideUp(200);
-        }
+            // Close other dropdowns
+            $('.dropdown-menu').not($el).slideUp(200);
+    
+            // Toggle current dropdown
+            $el.stop(true, true).slideToggle(200);
+          }
+        });
+    
+        // Close dropdowns when clicking outside
+        $(document).click(function (e) {
+          if (!$(e.target).closest('.navbar').length) {
+            $('.dropdown-menu').slideUp(200);
+          }
+        });
       });
     </script>
+
