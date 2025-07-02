@@ -9,3 +9,27 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Fix mobile dropdown menu behavior for Bootstrap 3 -->
+    <script>
+      $(document).on('click', '.navbar-collapse.in .dropdown-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    
+        var $parent = $(this).parent();
+        var $submenu = $parent.find('.dropdown-menu');
+    
+        if ($submenu.is(':visible')) {
+          $submenu.slideUp(200);
+        } else {
+          $('.dropdown-menu').slideUp(200);
+          $submenu.slideDown(200);
+        }
+      });
+    
+      $(document).on('click', function(e) {
+        if (!$(e.target).closest('.dropdown-menu').length && !$(e.target).closest('.dropdown-toggle').length) {
+          $('.dropdown-menu').slideUp(200);
+        }
+      });
+    </script>
