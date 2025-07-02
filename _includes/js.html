@@ -12,41 +12,49 @@
 
     <!-- Fix mobile dropdown menu behavior for Bootstrap 3 -->
     <script>
-       $(function () {
-         var isMobile = function () {
-           return $('.navbar-toggle').is(':visible');
-         };
-     
-         // Override click behavior on dropdown toggles
-         $('.navbar-collapse').on('click', '.dropdown-toggle', function (e) {
-           if (isMobile()) {
-             e.preventDefault();
-             e.stopPropagation();
-     
-             var $submenu = $(this).next('.dropdown-menu');
-     
-             // Close all other open dropdowns
-             $('.dropdown-menu').not($submenu).slideUp(200);
-     
-             // Toggle this one
-             $submenu.stop(true, true).slideToggle(200);
-           }
-         });
-     
-         // Prevent collapsing navbar when clicking a dropdown toggle
-         $('.navbar-collapse').on('click', '.dropdown', function (e) {
-           if (isMobile()) {
-             e.stopPropagation();
-           }
-         });
-     
-         // Close dropdowns when tapping anywhere else
-         $(document).on('click', function (e) {
-           if (!$(e.target).closest('.navbar').length) {
-             $('.dropdown-menu').slideUp(200);
-           }
-         });
-       });
-     </script>
+      $(function () {
+        var isMobile = function () {
+          return $('.navbar-toggle').is(':visible');
+        };
+    
+        // Handle dropdown toggle click
+        $('.navbar-collapse').on('click', '.dropdown-toggle', function (e) {
+          if (isMobile()) {
+            e.preventDefault();
+            e.stopPropagation();
+    
+            var $submenu = $(this).next('.dropdown-menu');
+    
+            // Close others
+            $('.dropdown-menu').not($submenu).slideUp(200);
+    
+            // Toggle current
+            $submenu.stop(true, true).slideToggle(200);
+          }
+        });
+    
+        // Prevent collapsing when clicking the dropdown toggle itself
+        $('.navbar-collapse').on('click', '.dropdown', function (e) {
+          if (isMobile()) {
+            e.stopPropagation();
+          }
+        });
+    
+        // Allow collapse when clicking dropdown item (like Steady Linguist)
+        $('.navbar-collapse').on('click', '.dropdown-menu a', function () {
+          if (isMobile()) {
+            $('.navbar-toggle').click(); // manually collapse navbar
+          }
+        });
+    
+        // Close dropdowns when clicking outside
+        $(document).on('click', function (e) {
+          if (!$(e.target).closest('.navbar').length) {
+            $('.dropdown-menu').slideUp(200);
+          }
+        });
+      });
+    </script>
+
 
 
