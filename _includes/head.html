@@ -23,6 +23,11 @@
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://outleveledgames.com/img/minifiedOpZSocial.jpg{% endif %}">
   <meta property="og:site_name" content="Outleveled Games">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ '/img/OutleveledLogo.png' | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" href="{{ '/img/OutleveledLogo.png' | prepend: site.baseurl }}">
+
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
