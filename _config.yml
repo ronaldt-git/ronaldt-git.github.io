@@ -21,6 +21,8 @@ social:
     url: https://www.instagram.com/outleveledgames/
   - title: linkedin
     url: https://www.linkedin.com/in/ronald-tourtellot-4535b1170/
+  - title: chrome-web-store
+    url: https://chromewebstore.google.com/detail/steady-linguist/lcbiohoeaneglegahhhfkmcfpplhamck
 
 # Build settings
 markdown: kramdown
