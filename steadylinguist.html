@@ -82,8 +82,12 @@
     }
 
     .back-button {
+      position: fixed;        /* stick to top-left of viewport */
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    
       display: inline-block;
-      margin-bottom: 2rem;
       padding: 10px 20px;
       background-color: transparent;
       border: 2px solid #00ff84;
@@ -99,12 +103,24 @@
       background-color: #00ff84;
       color: #111;
     }
+    
+    /* Optional tweak for small screens */
+    @media (max-width: 600px) {
+      .back-button {
+        top: 12px;
+        left: 12px;
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+    }
+
 
   </style>
 </head>
 <body>
+  <a href="/" class="back-button">&larr; Back </a>
   <div class="container">
-    <a href="/" class="back-button">&larr; Back </a>
+    
     <img src="img/SteadyLinguistIcon.png" alt="Steady Linguist Icon" class="icon" />
     <h1>Steady Linguist</h1>
     <p>
