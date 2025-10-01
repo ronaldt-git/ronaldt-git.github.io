@@ -21,7 +21,7 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://outleveledgames.com/img/minifiedOpZSocial.jpg{% endif %}">
+  <!--<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://outleveledgames.com/img/minifiedOpZSocial.jpg{% endif %}"> -->
   <meta property="og:site_name" content="Outleveled Games">
 
 
@@ -56,9 +56,13 @@
     </script>
   {% endif %}
 
-  <!-- IE8 support -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Outleveled Games",
+    "url": "https://outleveledgames.com/",
+    "logo": "https://outleveledgames.com/img/favicon-32x32.png"
+  }
+  </script>
 </head>
