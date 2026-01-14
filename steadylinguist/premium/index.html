@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steady Linguist Premium</title>
+
+  <meta name="description" content="Upgrade Steady Linguist to Premium. Higher limits, 25+ languages, and priority support." />
+  <link rel="canonical" href="https://outleveledgames.com/steadylinguist/premium/" />
+
+  <meta property="og:title" content="Steady Linguist Premium" />
+  <meta property="og:description" content="Upgrade for higher limits, 25+ languages, and priority support." />
+  <meta property="og:image" content="https://outleveledgames.com/img/SteadyLinguistIcon.png" />
+  <meta property="og:url" content="https://outleveledgames.com/steadylinguist/premium/" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    .page-header {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 20px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1c1c3c, #2d4263);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container { max-width: 860px; width: 100%; }
+
+    .icon {
+      width: 88px;
+      height: 88px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 132, 0.25);
+    }
+
+    h1 { font-size: 2.2rem; margin: 0 0 0.75rem; }
+    p { font-size: 1.05rem; line-height: 1.6; opacity: 0.92; margin: 0.75rem 0; }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 2px solid #00ff84;
+      color: #00ff84;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      float: left;
+    }
+    .back-button:hover { background-color: #00ff84; color: #111; }
+    .container::after { content:""; display:block; clear:both; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 22px;
+      text-align: left;
+    }
+    @media (min-width: 760px) {
+      .cards { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 14px;
+      padding: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    .card h2 { margin: 0 0 8px; font-size: 1.15rem; }
+    .muted { opacity: 0.78; font-size: 0.98rem; margin: 0 0 12px; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-top: 6px;
+    }
+    .btn-primary { background-color: #00ff84; color: #111; }
+    .btn-primary:hover { background-color: #00e374; }
+    .btn-secondary { border: 2px solid #00ff84; color: #00ff84; background: transparent; }
+    .btn-secondary:hover { background-color: #00ff84; color: #111; }
+
+    .bullets { margin: 14px auto 0; max-width: 720px; text-align: left; }
+    .bullets li { margin: 8px 0; }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      opacity: 0.65;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-header">
+    <a href="/steadylinguist/" class="back-button">&larr; Back</a>
+  </div>
+
+  <div class="container">
+    <img src="/img/SteadyLinguistIcon.png" alt="Steady Linguist Icon" class="icon" />
+    <h1>Steady Linguist Premium</h1>
+    <p>Unlock higher monthly limits, 25+ languages, and priority support.</p>
+
+    <ul class="bullets">
+      <li><strong>Free:</strong> 25,000 characters/month, limited languages</li>
+      <li><strong>Premium:</strong> 500,000 characters/month, 25+ languages</li>
+      <li><strong>Same extension.</strong> No new install required.</li>
+    </ul>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Subscribe with Stripe</h2>
+        <p class="muted">Standard subscription. Works for everyone.</p>
+
+        <!-- Replace the href with your actual Stripe checkout link (or link to extension flow if you prefer) -->
+        <a class="btn btn-primary" href="PASTE_STRIPE_LINK_HERE" target="_blank" rel="noopener">
+          Continue to Checkout
+        </a>
+
+        <div class="note">You’ll be redirected back after successful payment.</div>
+      </div>
+
+      <div class="card">
+        <h2>Unlock with App Pass</h2>
+        <p class="muted">
+          Already have App Pass? You can unlock Premium without a separate subscription.
+        </p>
+
+        <a class="btn btn-secondary" href="https://joinapppass.com/" target="_blank" rel="noopener">
+          Open App Pass
+        </a>
+
+        <div class="note">
+          After you implement App Pass in the extension, users will unlock directly in the popup.
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 Outleveled Games. |
+      <a href="/steadylinguist/privacy/" style="color: #ccc;">Privacy Policy</a>
+    </footer>
+  </div>
+</body>
+</html>
