@@ -103,17 +103,12 @@ a:focus {
     border: 1px solid rgba(255,255,255,0.25);
 }
 
-.brand-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.brand-icon {
     width: 34px;
     height: 34px;
     border-radius: 10px;
-    background: linear-gradient(135deg, rgba(117,217,255,0.28), rgba(255,191,102,0.28));
-    border: 1px solid rgba(255,255,255,0.14);
-    font-size: 12px;
-    letter-spacing: 0.16em;
+    object-fit: cover;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.24);
 }
 
 .navbar-custom .nav li a {
@@ -156,8 +151,8 @@ a:focus {
     min-height: 100vh;
     padding: 140px 0 72px;
     background:
-        linear-gradient(90deg, rgba(2,4,6,0.78) 0%, rgba(2,4,6,0.52) 40%, rgba(2,4,6,0.2) 70%, rgba(2,4,6,0.16) 100%),
-        linear-gradient(180deg, rgba(2,4,6,0.1) 0%, rgba(2,4,6,0.25) 100%),
+        linear-gradient(90deg, rgba(2,4,6,0.52) 0%, rgba(2,4,6,0.28) 36%, rgba(2,4,6,0.08) 68%, rgba(2,4,6,0.04) 100%),
+        linear-gradient(180deg, rgba(2,4,6,0.04) 0%, rgba(2,4,6,0.18) 100%),
         url(/img/outleveledGamesHomePageImage.png) no-repeat center center;
     background-size: cover;
 }
@@ -167,13 +162,14 @@ a:focus {
 }
 
 .hero-panel {
-    max-width: 640px;
-    padding: 28px;
+    max-width: 430px;
+    margin-top: 90px;
+    padding: 22px 24px;
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 26px;
-    background: linear-gradient(180deg, rgba(6,10,15,0.84), rgba(6,10,15,0.72));
+    background: linear-gradient(180deg, rgba(6,10,15,0.62), rgba(6,10,15,0.5));
     box-shadow: 0 30px 90px rgba(0,0,0,0.42);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
 }
 
 .hero-kicker {
@@ -192,36 +188,13 @@ a:focus {
     line-height: 1.02;
 }
 
-.intro-text {
-    margin-bottom: 24px;
-    color: #dde6f2;
-    font-size: 20px;
-    max-width: 580px;
-}
-
 .hero-actions,
 .project-actions,
 .project-links,
-.legal-links,
-.hero-meta {
+.legal-links {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-}
-
-.hero-meta {
-    margin-top: 18px;
-}
-
-.hero-meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.07);
-    color: #d8e3ef;
-    font-size: 14px;
 }
 
 .content-section {
@@ -395,6 +368,18 @@ a:focus {
         linear-gradient(180deg, rgba(26,18,7,0.92), rgba(13,10,7,0.98));
 }
 
+.project-art-panel.project-art-panel-cool {
+    background:
+        radial-gradient(circle at top, rgba(121,207,255,0.18), transparent 48%),
+        linear-gradient(180deg, rgba(9,18,26,0.92), rgba(7,11,16,0.98));
+}
+
+.project-art-panel.project-art-panel-green {
+    background:
+        radial-gradient(circle at top, rgba(99,239,178,0.18), transparent 48%),
+        linear-gradient(180deg, rgba(9,23,18,0.92), rgba(7,14,12,0.98));
+}
+
 .project-art-panel img {
     width: 100%;
     max-width: 360px;
@@ -544,6 +529,7 @@ img::-moz-selection {
 
     .hero-panel {
         max-width: none;
+        margin-top: 72px;
     }
 
     .project-title {
@@ -578,14 +564,14 @@ img::-moz-selection {
     }
 
     .hero-panel {
-        padding: 22px 18px;
+        margin-top: 48px;
+        padding: 20px 18px;
     }
 
     .brand-heading {
         font-size: 38px;
     }
 
-    .intro-text,
     .project-lead {
         font-size: 18px;
     }
