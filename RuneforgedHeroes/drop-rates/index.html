@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runeforged Heroes Drop Rates</title>
+  <meta name="description" content="Runeforged Heroes reward and drop-rate reference page." />
+  <link rel="canonical" href="https://outleveledgames.com/RuneforgedHeroes/drop-rates/" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #22d3ee;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a101c, var(--bg));
+      color: var(--text);
+      line-height: 1.55;
+      padding: 24px 16px 48px;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      background: rgba(17, 24, 39, 0.96);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 20px;
+    }
+    h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+    h1 { font-size: 1.9rem; margin-bottom: 8px; }
+    h2 { font-size: 1.15rem; margin-top: 24px; }
+    h3 { font-size: 1rem; margin-top: 18px; }
+    .muted { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+    }
+    .note {
+      border: 1px solid #334155;
+      background: rgba(15, 23, 42, 0.65);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 0.96rem;
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: rgba(30, 41, 59, 0.7); }
+    ul { padding-left: 20px; }
+    .small { font-size: 0.92rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <nav class="nav">
+      <a href="/">Back to Outleveled Games</a>
+      <a href="/RuneforgedHeroes/privacy/">Runeforged Heroes Privacy</a>
+      <a href="/RuneforgedHeroes/terms/">Runeforged Heroes Terms</a>
+    </nav>
+
+    <h1>Runeforged Heroes Drop Rates</h1>
+    <p class="muted"><strong>Last updated:</strong> April 13, 2026</p>
+
+    <p class="note">
+      Runeforged Heroes is in development. Rates and reward systems can change with patches, balancing, events,
+      and live-ops updates. This page reflects current configured behavior and may be revised at any time.
+    </p>
+
+    <h2>Daily Roulette</h2>
+    <p class="small">Configured weights total 100, so listed percentages are direct odds.</p>
+    <table>
+      <tr><th>Reward</th><th>Chance</th></tr>
+      <tr><td>10,000 essence</td><td>25%</td></tr>
+      <tr><td>10,000 gold</td><td>25%</td></tr>
+      <tr><td>50 gems</td><td>20%</td></tr>
+      <tr><td>1 silver key</td><td>13%</td></tr>
+      <tr><td>1 gold key</td><td>7%</td></tr>
+      <tr><td>300 gems</td><td>5%</td></tr>
+      <tr><td>3 universal shards</td><td>3%</td></tr>
+      <tr><td>10 universal shards</td><td>2%</td></tr>
+    </table>
+    <ul>
+      <li>1st daily spin: free</li>
+      <li>2nd daily spin: rewarded ad</li>
+      <li>3rd+ daily spins: 120 gems each</li>
+    </ul>
+
+    <h2>Chest Opening</h2>
+    <p class="small">Each chest table totals 100, so listed percentages are direct odds.</p>
+
+    <h3>Silver Chest</h3>
+    <p class="small">Gem cost fallback: 100</p>
+    <table>
+      <tr><th>Reward</th><th>Chance</th></tr>
+      <tr><td>Essence worth 12.5% of current campaign-gold curve value</td><td>25%</td></tr>
+      <tr><td>Gold worth 12.5% of current campaign-gold curve value</td><td>15%</td></tr>
+      <tr><td>1 common gear piece</td><td>40%</td></tr>
+      <tr><td>1 uncommon gear piece</td><td>15%</td></tr>
+      <tr><td>1 rare gear piece</td><td>5%</td></tr>
+    </table>
+
+    <h3>Gold Chest</h3>
+    <p class="small">Gem cost fallback: 250</p>
+    <table>
+      <tr><th>Reward</th><th>Chance</th></tr>
+      <tr><td>Essence worth 33.33% of current campaign-gold curve value</td><td>25%</td></tr>
+      <tr><td>Gold worth 33.33% of current campaign-gold curve value</td><td>15%</td></tr>
+      <tr><td>1 uncommon gear piece</td><td>40%</td></tr>
+      <tr><td>1 rare gear piece</td><td>15%</td></tr>
+      <tr><td>1 epic gear piece</td><td>5%</td></tr>
+    </table>
+
+    <h3>Champion Chest</h3>
+    <p class="small">Gem cost fallback: 400</p>
+    <table>
+      <tr><th>Reward</th><th>Chance</th></tr>
+      <tr><td>5 uncommon hero shards</td><td>40%</td></tr>
+      <tr><td>5 rare hero shards</td><td>30%</td></tr>
+      <tr><td>5 epic hero shards</td><td>17%</td></tr>
+      <tr><td>5 legendary hero shards</td><td>10%</td></tr>
+      <tr><td>5 mythic hero shards</td><td>3%</td></tr>
+    </table>
+
+    <h3>Ascendant Chest</h3>
+    <p class="small">Gem cost fallback: 1000</p>
+    <table>
+      <tr><th>Reward</th><th>Chance</th></tr>
+      <tr><td>3 legendary hero shards</td><td>22%</td></tr>
+      <tr><td>3 mythic hero shards</td><td>13%</td></tr>
+      <tr><td>1 epic gear piece</td><td>40%</td></tr>
+      <tr><td>1 legendary gear piece</td><td>15%</td></tr>
+      <tr><td>10 legendary hero shards</td><td>8%</td></tr>
+      <tr><td>10 mythic hero shards</td><td>2%</td></tr>
+    </table>
+
+    <h3>Chest Gear Pool Notes</h3>
+    <ul>
+      <li>Gear sets: abyss, bastion, divine, pyro, reaper, titanbane, viper</li>
+      <li>Slots: belt, boots, chestplate, elixir, helmet, necklace, ring, weapon_1, weapon_2, weapon_3</li>
+      <li>The exact final piece is selected by the authoritative cloud/backend pool logic.</li>
+    </ul>
+
+    <h2>Campaign Gear Drops</h2>
+    <p class="small">Current runtime behavior reflects code-level drop-count clamping.</p>
+    <table>
+      <tr><th>Drop count</th><th>Effective chance</th></tr>
+      <tr><td>2 drops</td><td>90%</td></tr>
+      <tr><td>3 drops</td><td>10%</td></tr>
+    </table>
+    <table>
+      <tr><th>Rarity</th><th>Chance per gear drop</th></tr>
+      <tr><td>Common</td><td>65%</td></tr>
+      <tr><td>Uncommon</td><td>33%</td></tr>
+      <tr><td>Rare</td><td>2%</td></tr>
+    </table>
+    <ul>
+      <li>Completion scaling applies after roll: rolled drop count is multiplied by completion percentage, then floored.</li>
+    </ul>
+
+    <h2>Hero Delve Gear Drops</h2>
+    <table>
+      <tr><th>Drop count</th><th>Effective chance</th></tr>
+      <tr><td>3 drops</td><td>100%</td></tr>
+    </table>
+    <table>
+      <tr><th>Rarity</th><th>Chance per gear drop</th></tr>
+      <tr><td>Common</td><td>65%</td></tr>
+      <tr><td>Uncommon</td><td>33%</td></tr>
+      <tr><td>Rare</td><td>2%</td></tr>
+    </table>
+
+    <h2>Hero Delve Shard Rewards</h2>
+    <h3>Full-clear shard count</h3>
+    <table>
+      <tr><th>Shards before completion scaling</th><th>Chance</th></tr>
+      <tr><td>3</td><td>30%</td></tr>
+      <tr><td>4</td><td>30%</td></tr>
+      <tr><td>5</td><td>20%</td></tr>
+      <tr><td>6</td><td>12%</td></tr>
+      <tr><td>7</td><td>8%</td></tr>
+    </table>
+
+    <h3>Target hero rarity</h3>
+    <table>
+      <tr><th>Hero rarity</th><th>Chance</th></tr>
+      <tr><td>Uncommon</td><td>35%</td></tr>
+      <tr><td>Rare</td><td>30%</td></tr>
+      <tr><td>Epic</td><td>20%</td></tr>
+      <tr><td>Legendary</td><td>10%</td></tr>
+      <tr><td>Mythic</td><td>5%</td></tr>
+    </table>
+    <p class="small">Within each chosen rarity, target hero selection is uniform across eligible heroes.</p>
+
+    <h2>Mission Random Gear Rewards</h2>
+    <ul>
+      <li>For mission rewards like random common/uncommon/rare/epic gear, rarity is fixed by reward definition.</li>
+      <li>The specific piece is selected uniformly from the configured authoritative pool for that reward type.</li>
+    </ul>
+
+    <h2>Run Upgrade Shop Offer Rarity</h2>
+    <table>
+      <tr><th>Rarity</th><th>Relative chance</th></tr>
+      <tr><td>Common</td><td>60%</td></tr>
+      <tr><td>Rare</td><td>30%</td></tr>
+      <tr><td>Epic</td><td>9%</td></tr>
+      <tr><td>Legendary</td><td>1%</td></tr>
+    </table>
+    <p class="small">Final observed odds depend on currently eligible, non-maxed upgrades at the time of roll.</p>
+
+    <h2>Guild Daily Chest</h2>
+    <p>
+      Guild daily rewards are currently level/tier-based rather than a single simple weighted table.
+      Reward quantity, rarity bands, and eligible pools vary by guild level/tier.
+      Each guild daily claim also grants 50 gems.
+    </p>
+  </main>
+</body>
+</html>
