@@ -15,6 +15,12 @@ html,
 body {
     width: 100%;
     min-height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    background: #020406;
+    background-color: #020406;
 }
 
 body {
@@ -23,7 +29,9 @@ body {
     background:
         radial-gradient(circle at top, rgba(117,217,255,0.08), transparent 36%),
         linear-gradient(180deg, #020406 0%, #05080c 45%, #020406 100%);
+    background-color: #020406;
     -webkit-tap-highlight-color: rgba(255,255,255,.18);
+    min-height: 100dvh;
 }
 
 h1,
@@ -524,7 +532,7 @@ img::-moz-selection {
 @media(max-width:991px) {
     .intro {
         padding-top: 120px;
-        background-position: 62% center;
+        background-position: center center;
     }
 
     .hero-panel {
@@ -541,7 +549,19 @@ img::-moz-selection {
     }
 }
 
+/* Phone landscape: still "mobile" UX even though width can exceed 767px. */
+@media(max-width:991px) and (max-height:500px) {
+    .studio-grid {
+        display: none;
+    }
+}
+
 @media(max-width:767px) {
+    /* Studio cards are too tall on small screens */
+    .studio-grid {
+        display: none;
+    }
+
     p {
         font-size: 17px;
         line-height: 1.65;
@@ -558,9 +578,10 @@ img::-moz-selection {
     }
 
     .intro {
-        min-height: auto;
-        padding: 104px 0 54px;
-        background-position: 66% top;
+        align-items: flex-end;
+        min-height: 60vh;
+        padding: 86px 0 34px;
+        background-position: center center;
     }
 
     .hero-panel {
@@ -594,5 +615,20 @@ img::-moz-selection {
 
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
+    }
+}
+
+/* iOS notch / safe-area: allow the page background to fill the full display while keeping UI insets sane. */
+@supports (padding: env(safe-area-inset-left)) {
+    .navbar.navbar-fixed-top {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        padding-top: env(safe-area-inset-top);
+    }
+
+    /* Keep content away from the notch in landscape without shrinking full-width backgrounds. */
+    .container {
+        padding-left: calc(15px + env(safe-area-inset-left));
+        padding-right: calc(15px + env(safe-area-inset-right));
     }
 }
