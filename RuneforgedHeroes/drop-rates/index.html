@@ -90,6 +90,79 @@
       white-space: nowrap;
       border: 0;
     }
+
+    .legal-wrap > h2 {
+      margin-top: 42px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255, 207, 125, 0.32);
+    }
+
+    .chest-card {
+      margin: 22px 0;
+      padding: 20px;
+      border: 1px solid rgba(255, 207, 125, 0.24);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255, 207, 125, 0.09), rgba(255, 255, 255, 0.02));
+    }
+
+    .chest-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .chest-card-header h3 {
+      margin: 0;
+    }
+
+    .chest-art {
+      width: 88px;
+      height: 88px;
+      flex: 0 0 auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.34));
+    }
+
+    .chest-pricing {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin: 0 0 16px 104px;
+      color: var(--legal-muted);
+    }
+
+    .chest-pricing strong {
+      color: var(--legal-text);
+    }
+
+    .mission-reward-callout {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 14px;
+      border: 1px solid rgba(255, 207, 125, 0.20);
+      border-radius: 14px;
+      background: rgba(255, 207, 125, 0.06);
+    }
+
+    .mission-reward-art {
+      width: 76px;
+      height: 76px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .mission-reward-callout p {
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .chest-pricing {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body class="legal-page">
@@ -131,42 +204,73 @@
     <h2>Chest Opening</h2>
     <p class="legal-muted">Each chest table totals 100, so listed percentages are direct odds.</p>
 
-    <h3>Silver Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">100</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
-    <table class="legal-table">
+    <section class="chest-card">
+      <div class="chest-card-header">
+        <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Silver.png" alt="Silver Chest">
+        <h3>Silver Chest</h3>
+      </div>
+      <div class="chest-pricing">
+        <span><strong>Cost:</strong> <span class="reward-amount">100</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+        <span><strong>Open 10:</strong> <span class="reward-amount">900</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+      </div>
+      <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden">Essence </span>worth 12.5% of current campaign-gold curve value</td><td>25%</td></tr>
       <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden">Gold </span>worth 12.5% of current campaign-gold curve value</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-common">Common</span> gear piece</td><td>40%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> gear piece</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span> gear piece</td><td>5%</td></tr>
-    </table>
+      </table>
+    </section>
 
-    <h3>Gold Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
-    <table class="legal-table">
+    <section class="chest-card">
+      <div class="chest-card-header">
+        <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Gold.png" alt="Gold Chest">
+        <h3>Gold Chest</h3>
+      </div>
+      <div class="chest-pricing">
+        <span><strong>Cost:</strong> <span class="reward-amount">250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+        <span><strong>Open 10:</strong> <span class="reward-amount">2,250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+      </div>
+      <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden">Essence </span>worth 33.33% of current campaign-gold curve value</td><td>25%</td></tr>
       <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden">Gold </span>worth 33.33% of current campaign-gold curve value</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> gear piece</td><td>40%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span> gear piece</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-epic">Epic</span> gear piece</td><td>5%</td></tr>
-    </table>
+      </table>
+    </section>
 
-    <h3>Champion Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">400</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
-    <table class="legal-table">
+    <section class="chest-card">
+      <div class="chest-card-header">
+        <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Special.png" alt="Champion Chest">
+        <h3>Champion Chest</h3>
+      </div>
+      <div class="chest-pricing">
+        <span><strong>Cost:</strong> <span class="reward-amount">400</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+        <span><strong>Open 10:</strong> <span class="reward-amount">3,600</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+      </div>
+      <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> hero shards</td><td>40%</td></tr>
       <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-rare">Rare</span> hero shards</td><td>30%</td></tr>
       <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-epic">Epic</span> hero shards</td><td>17%</td></tr>
       <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>10%</td></tr>
       <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-mythic">Mythic</span> hero shards</td><td>3%</td></tr>
-    </table>
+      </table>
+    </section>
 
-    <h3>Ascendant Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">1000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
-    <table class="legal-table">
+    <section class="chest-card">
+      <div class="chest-card-header">
+        <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Premium.png" alt="Ascendant Chest">
+        <h3>Ascendant Chest</h3>
+      </div>
+      <div class="chest-pricing">
+        <span><strong>Cost:</strong> <span class="reward-amount">1,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+        <span><strong>Open 10:</strong> <span class="reward-amount">9,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+      </div>
+      <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>22%</td></tr>
       <tr><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-mythic">Mythic</span> hero shards</td><td>13%</td></tr>
@@ -174,7 +278,8 @@
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-legendary">Legendary</span> gear piece</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">10</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>8%</td></tr>
       <tr><td><span class="reward-amount">10</span> <span class="rarity-chip rarity-mythic">Mythic</span> hero shards</td><td>2%</td></tr>
-    </table>
+      </table>
+    </section>
 
     <h3>Chest Gear Pool Notes</h3>
     <ul>
@@ -211,12 +316,12 @@
       <tr><td>18</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
       <tr><td>19</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
       <tr><td>20</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>5 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
-      <tr><td>21</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
-      <tr><td>22</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
-      <tr><td>23</td><td>2/3/4: 20% / 50% / 30%</td><td>60% Uncommon, 30% Rare, 8% Epic, 2% Legendary</td><td>40% for 1 eligible hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
-      <tr><td>24</td><td>2/3/4: 10% / 55% / 35%</td><td>50% Uncommon, 35% Rare, 11% Epic, 4% Legendary</td><td>50% for 1 eligible hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
-      <tr><td>25</td><td>2/3/4: 5% / 60% / 35%</td><td>30% Uncommon, 50% Rare, 15% Epic, 5% Legendary</td><td>60% for 1 eligible hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
-      <tr><td>26</td><td>3/4: 60% / 40%</td><td>70% Rare, 21% Epic, 9% Legendary</td><td>75% for 1 eligible hero shard</td><td>10 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>21</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 hero shard</td><td>3 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>22</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 hero shard</td><td>3 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>23</td><td>2/3/4: 20% / 50% / 30%</td><td>60% Uncommon, 30% Rare, 8% Epic, 2% Legendary</td><td>40% for 1 hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>24</td><td>2/3/4: 10% / 55% / 35%</td><td>50% Uncommon, 35% Rare, 11% Epic, 4% Legendary</td><td>50% for 1 hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>25</td><td>2/3/4: 5% / 60% / 35%</td><td>30% Uncommon, 50% Rare, 15% Epic, 5% Legendary</td><td>60% for 1 hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>26</td><td>3/4: 60% / 40%</td><td>70% Rare, 21% Epic, 9% Legendary</td><td>75% for 1 hero shard</td><td>10 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
     </table>
 
     <h3>Exact Individual Gear-Piece Rates</h3>
@@ -271,6 +376,10 @@
     <p>Within each chosen rarity, target hero selection is uniform across eligible heroes.</p>
 
     <h2>Mission Random Gear Rewards</h2>
+    <div class="mission-reward-callout">
+      <img class="mission-reward-art" src="/img/runeforged-heroes/rewards/random-gearIcon.png" alt="Random gear reward">
+      <p class="legal-muted">Random gear rewards use the shown rarity from their reward definition, then roll a piece from the configured pool.</p>
+    </div>
     <ul>
       <li>For mission rewards like random common, uncommon, rare, or epic gear, rarity is fixed by the reward definition.</li>
       <li>The specific piece is selected uniformly from the authoritative full gear-piece list for that reward type.</li>
