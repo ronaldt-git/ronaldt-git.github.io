@@ -13,17 +13,17 @@
       --legal-accent: #ffcf7d;
       --reward-amount: #FFDC00;
       --common-base: #524F4E;
-      --common-display: #6B6867;
+      --common-display: #B1AEAD;
       --uncommon-base: #3C8162;
-      --uncommon-display: #4EC16E;
+      --uncommon-display: #7DE69B;
       --rare-base: #3D568D;
-      --rare-display: #567AB1;
+      --rare-display: #8BA9D4;
       --epic-base: #615096;
-      --epic-display: #8D70C7;
+      --epic-display: #BBA1EA;
       --legendary-base: #B17445;
-      --legendary-display: #D7A65D;
+      --legendary-display: #E4C384;
       --mythic-base: #D70101;
-      --mythic-display: #FF4949;
+      --mythic-display: #FF8686;
       --universal-shard: #FF5ACD;
     }
 
@@ -112,7 +112,11 @@
       margin-bottom: 8px;
     }
 
-    .chest-card-header h3 {
+    .chest-card-info {
+      min-width: 0;
+    }
+
+    .chest-card-info h3 {
       margin: 0;
     }
 
@@ -128,7 +132,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px 18px;
-      margin: 0 0 16px 104px;
+      margin: 8px 0 0;
       color: var(--legal-muted);
     }
 
@@ -186,8 +190,8 @@
     <p class="legal-muted">Configured weights total 100, so listed percentages are direct odds.</p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td><span class="reward-amount">30,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden"> essence</span> (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
-      <tr><td><span class="reward-amount">30,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden"> gold</span> (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
+      <tr><td><span class="reward-amount">30,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden"> essence</span> (Ch. 1-9), <span class="reward-amount">75,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden"> essence</span> (Ch. 10-19), or <span class="reward-amount">150,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden"> essence</span> (Ch. 20+)</td><td>25%</td></tr>
+      <tr><td><span class="reward-amount">30,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden"> gold</span> (Ch. 1-9), <span class="reward-amount">75,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden"> gold</span> (Ch. 10-19), or <span class="reward-amount">150,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden"> gold</span> (Ch. 20+)</td><td>25%</td></tr>
       <tr><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td><td>20%</td></tr>
       <tr><td><span class="reward-amount">1</span> Silver Key<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td><td>13%</td></tr>
       <tr><td><span class="reward-amount">1</span> Gold Key<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td><td>7%</td></tr>
@@ -207,11 +211,13 @@
     <section class="chest-card">
       <div class="chest-card-header">
         <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Silver.png" alt="Silver Chest">
-        <h3>Silver Chest</h3>
-      </div>
-      <div class="chest-pricing">
-        <span><strong>Cost:</strong> <span class="reward-amount">100</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
-        <span><strong>Open 10:</strong> <span class="reward-amount">900</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+        <div class="chest-card-info">
+          <h3>Silver Chest</h3>
+          <div class="chest-pricing">
+            <span><strong>Cost:</strong> <span class="reward-amount">100</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+            <span><strong>Open 10:</strong> <span class="reward-amount">900</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+          </div>
+        </div>
       </div>
       <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
@@ -226,11 +232,13 @@
     <section class="chest-card">
       <div class="chest-card-header">
         <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Gold.png" alt="Gold Chest">
-        <h3>Gold Chest</h3>
-      </div>
-      <div class="chest-pricing">
-        <span><strong>Cost:</strong> <span class="reward-amount">250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
-        <span><strong>Open 10:</strong> <span class="reward-amount">2,250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+        <div class="chest-card-info">
+          <h3>Gold Chest</h3>
+          <div class="chest-pricing">
+            <span><strong>Cost:</strong> <span class="reward-amount">250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+            <span><strong>Open 10:</strong> <span class="reward-amount">2,250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+          </div>
+        </div>
       </div>
       <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
@@ -245,11 +253,13 @@
     <section class="chest-card">
       <div class="chest-card-header">
         <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Special.png" alt="Champion Chest">
-        <h3>Champion Chest</h3>
-      </div>
-      <div class="chest-pricing">
-        <span><strong>Cost:</strong> <span class="reward-amount">400</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
-        <span><strong>Open 10:</strong> <span class="reward-amount">3,600</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+        <div class="chest-card-info">
+          <h3>Champion Chest</h3>
+          <div class="chest-pricing">
+            <span><strong>Cost:</strong> <span class="reward-amount">400</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+            <span><strong>Open 10:</strong> <span class="reward-amount">3,600</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+          </div>
+        </div>
       </div>
       <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
@@ -264,11 +274,13 @@
     <section class="chest-card">
       <div class="chest-card-header">
         <img class="chest-art" src="/img/runeforged-heroes/rewards/Chest_Premium.png" alt="Ascendant Chest">
-        <h3>Ascendant Chest</h3>
-      </div>
-      <div class="chest-pricing">
-        <span><strong>Cost:</strong> <span class="reward-amount">1,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
-        <span><strong>Open 10:</strong> <span class="reward-amount">9,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+        <div class="chest-card-info">
+          <h3>Ascendant Chest</h3>
+          <div class="chest-pricing">
+            <span><strong>Cost:</strong> <span class="reward-amount">1,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</span>
+            <span><strong>Open 10:</strong> <span class="reward-amount">9,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> (10 for the price of 9)</span>
+          </div>
+        </div>
       </div>
       <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
@@ -284,20 +296,20 @@
     <h3>Chest Gear Pool Notes</h3>
     <ul>
       <li>Gear sets: abyss, bastion, divine, pyro, reaper, titanbane, viper</li>
-      <li>Slots: belt, boots, chestplate, elixir, helmet, necklace, ring, weapon_1, weapon_2, weapon_3</li>
+      <li>Slots: belt, boots, chestplate, elixir, helmet, necklace, ring, Melee, Ranged, and Staff</li>
       <li>The runtime configuration includes 10 unique weapons. The exact final piece is selected by the authoritative cloud gear-pool builder.</li>
     </ul>
 
     <h2>Campaign Level Rewards</h2>
     <p class="legal-muted">
       These are the current rates for a completed normal campaign level. Gear quantity is rolled first, then each awarded
-      gear item independently rolls its rarity. Duplicates are allowed. Gold and essence are also awarded on every
+      gear item independently rolls its rarity. Gold and essence are also awarded on every
       completion, but scale with the campaign reward curve rather than a fixed chapter amount.
     </p>
     <table class="legal-table campaign-rates">
       <tr><th>Chapter</th><th>Gear quantity odds</th><th>Rarity per gear item</th><th>Random hero shard</th><th>One-time first-clear reward</th></tr>
       <tr><td>1</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>1 Silver Key<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
-      <tr><td>2</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>30 shards for one guaranteed-unowned Uncommon hero</td></tr>
+      <tr><td>2</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td><span class="reward-amount">30</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> hero shards</td></tr>
       <tr><td>3</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>3 Silver Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
       <tr><td>4</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
       <tr><td>5</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
@@ -341,7 +353,7 @@
     </p>
 
     <h2>Hero Delve Gear Drops</h2>
-    <p class="legal-muted">The configured quantity table currently resolves to exactly three drops before completion scaling. Duplicates are allowed.</p>
+    <p class="legal-muted">The configured quantity table currently resolves to exactly three drops before completion scaling.</p>
     <table class="legal-table">
       <tr><th>Drop count</th><th>Effective chance</th></tr>
       <tr><td>3 drops</td><td>100%</td></tr>
@@ -354,6 +366,7 @@
     </table>
 
     <h2>Hero Delve Shard Rewards</h2>
+    <p class="legal-muted">All shards from one completed Hero Delve are awarded for one hero.</p>
     <h3>Full-clear shard count</h3>
     <table class="legal-table">
       <tr><th>Shards before completion scaling</th><th>Chance</th></tr>
@@ -396,11 +409,25 @@
     <p>Final observed odds depend on currently eligible, non-maxed upgrades at the time of roll.</p>
 
     <h2>Guild Daily Chest</h2>
-    <p>
-      Guild daily rewards are currently level or tier-based rather than one simple weighted table.
-      Reward quantity, rarity bands, and eligible pools vary by guild level or tier.
-      Each guild daily claim also grants <span class="reward-amount">50</span> gems.
-    </p>
+    <p class="legal-muted">Each guild member can claim the following daily chest rewards for their guild level.</p>
+    <table class="legal-table">
+      <tr><th>Guild level</th><th>Gear</th><th>Hero shards</th><th>Gems</th></tr>
+      <tr><td>1</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-common">Common</span></td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>2</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>3</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">2</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>4</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">2</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>5</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-uncommon">Uncommon</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>6</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>7</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>8</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">4</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>9</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>10</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span> / <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>11</td><td><span class="reward-amount">2</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span> / <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>12</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">2</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span> / <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>13</td><td><span class="reward-amount">2</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">2</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span> / <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>14</td><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> + <span class="reward-amount">3</span> <span class="rarity-chip rarity-rare">Rare</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span> / <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+      <tr><td>15+</td><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-rare">Rare</span> + <span class="reward-amount">1</span> <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> / <span class="rarity-chip rarity-rare">Rare</span> / <span class="rarity-chip rarity-epic">Epic</span></td><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td></tr>
+    </table>
 
     <div class="legal-footer">
       Outleveled Games | <a href="mailto:outleveledgames@gmail.com">outleveledgames@gmail.com</a>
