@@ -11,6 +11,55 @@
   <style>
     :root {
       --legal-accent: #ffcf7d;
+      --reward-amount: #FFDC00;
+      --uncommon-base: #3C8162;
+      --uncommon-display: #4EC16E;
+      --rare-base: #3D568D;
+      --rare-display: #567AB1;
+      --epic-base: #615096;
+      --epic-display: #8D70C7;
+      --legendary-base: #B17445;
+      --legendary-display: #D7A65D;
+      --mythic-base: #D70101;
+      --mythic-display: #FF4949;
+      --universal-shard: #FF5ACD;
+    }
+
+    .reward-amount {
+      color: var(--reward-amount);
+      font-weight: 800;
+    }
+
+    .universal-shard {
+      color: var(--universal-shard);
+      font-weight: 800;
+    }
+
+    .rarity-chip {
+      display: inline-block;
+      margin: 1px 2px;
+      padding: 1px 6px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.86em;
+      font-weight: 800;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    .rarity-uncommon { background: var(--uncommon-base); color: var(--uncommon-display); }
+    .rarity-rare { background: var(--rare-base); color: var(--rare-display); }
+    .rarity-epic { background: var(--epic-base); color: var(--epic-display); }
+    .rarity-legendary { background: var(--legendary-base); color: var(--legendary-display); }
+    .rarity-mythic { background: var(--mythic-base); color: var(--mythic-display); }
+
+    .campaign-rates td:nth-child(3) .rarity-chip {
+      margin-right: 0;
+    }
+
+    .campaign-rates td:nth-child(5) {
+      color: var(--reward-amount);
+      font-weight: 800;
     }
   </style>
 </head>
@@ -24,7 +73,7 @@
 
     <div class="legal-kicker">Runeforged Heroes</div>
     <h1>Drop Rates</h1>
-    <p class="legal-muted"><strong>Last updated:</strong> April 13, 2026</p>
+    <p class="legal-muted"><strong>Last updated:</strong> October 26, 2026</p>
 
     <p class="legal-note">
       Runeforged Heroes is in development. Rates and reward systems can change with patches, balancing, events,
@@ -35,94 +84,130 @@
     <p class="legal-muted">Configured weights total 100, so listed percentages are direct odds.</p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td>10,000 essence</td><td>25%</td></tr>
-      <tr><td>10,000 gold</td><td>25%</td></tr>
-      <tr><td>50 gems</td><td>20%</td></tr>
-      <tr><td>1 silver key</td><td>13%</td></tr>
-      <tr><td>1 gold key</td><td>7%</td></tr>
-      <tr><td>300 gems</td><td>5%</td></tr>
-      <tr><td>3 universal shards</td><td>3%</td></tr>
-      <tr><td>10 universal shards</td><td>2%</td></tr>
+      <tr><td><span class="reward-amount">30,000</span> essence (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
+      <tr><td><span class="reward-amount">30,000</span> gold (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
+      <tr><td><span class="reward-amount">50</span> gems</td><td>20%</td></tr>
+      <tr><td><span class="reward-amount">1</span> silver key</td><td>13%</td></tr>
+      <tr><td><span class="reward-amount">1</span> gold key</td><td>7%</td></tr>
+      <tr><td><span class="reward-amount">300</span> gems</td><td>5%</td></tr>
+      <tr><td><span class="reward-amount">3</span> <span class="universal-shard">universal shards</span></td><td>3%</td></tr>
+      <tr><td><span class="reward-amount">10</span> <span class="universal-shard">universal shards</span></td><td>2%</td></tr>
     </table>
     <ul>
       <li>1st daily spin: free</li>
       <li>2nd daily spin: rewarded ad</li>
-      <li>3rd and later daily spins: 120 gems each</li>
+      <li>3rd and later daily spins: <span class="reward-amount">120</span> gems each</li>
     </ul>
 
     <h2>Chest Opening</h2>
     <p class="legal-muted">Each chest table totals 100, so listed percentages are direct odds.</p>
 
     <h3>Silver Chest</h3>
-    <p class="legal-muted">Gem cost fallback: 100</p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">100</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td>Essence worth 12.5% of current campaign-gold curve value</td><td>25%</td></tr>
       <tr><td>Gold worth 12.5% of current campaign-gold curve value</td><td>15%</td></tr>
-      <tr><td>1 common gear piece</td><td>40%</td></tr>
-      <tr><td>1 uncommon gear piece</td><td>15%</td></tr>
-      <tr><td>1 rare gear piece</td><td>5%</td></tr>
+      <tr><td><span class="reward-amount">1</span> common gear piece</td><td>40%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> gear piece</td><td>15%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span> gear piece</td><td>5%</td></tr>
     </table>
 
     <h3>Gold Chest</h3>
-    <p class="legal-muted">Gem cost fallback: 250</p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">250</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td>Essence worth 33.33% of current campaign-gold curve value</td><td>25%</td></tr>
       <tr><td>Gold worth 33.33% of current campaign-gold curve value</td><td>15%</td></tr>
-      <tr><td>1 uncommon gear piece</td><td>40%</td></tr>
-      <tr><td>1 rare gear piece</td><td>15%</td></tr>
-      <tr><td>1 epic gear piece</td><td>5%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> gear piece</td><td>40%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span> gear piece</td><td>15%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-epic">Epic</span> gear piece</td><td>5%</td></tr>
     </table>
 
     <h3>Champion Chest</h3>
-    <p class="legal-muted">Gem cost fallback: 400</p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">400</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td>5 uncommon hero shards</td><td>40%</td></tr>
-      <tr><td>5 rare hero shards</td><td>30%</td></tr>
-      <tr><td>5 epic hero shards</td><td>17%</td></tr>
-      <tr><td>5 legendary hero shards</td><td>10%</td></tr>
-      <tr><td>5 mythic hero shards</td><td>3%</td></tr>
+      <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> hero shards</td><td>40%</td></tr>
+      <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-rare">Rare</span> hero shards</td><td>30%</td></tr>
+      <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-epic">Epic</span> hero shards</td><td>17%</td></tr>
+      <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>10%</td></tr>
+      <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-mythic">Mythic</span> hero shards</td><td>3%</td></tr>
     </table>
 
     <h3>Ascendant Chest</h3>
-    <p class="legal-muted">Gem cost fallback: 1000</p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">1000</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td>3 legendary hero shards</td><td>22%</td></tr>
-      <tr><td>3 mythic hero shards</td><td>13%</td></tr>
-      <tr><td>1 epic gear piece</td><td>40%</td></tr>
-      <tr><td>1 legendary gear piece</td><td>15%</td></tr>
-      <tr><td>10 legendary hero shards</td><td>8%</td></tr>
-      <tr><td>10 mythic hero shards</td><td>2%</td></tr>
+      <tr><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>22%</td></tr>
+      <tr><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-mythic">Mythic</span> hero shards</td><td>13%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-epic">Epic</span> gear piece</td><td>40%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-legendary">Legendary</span> gear piece</td><td>15%</td></tr>
+      <tr><td><span class="reward-amount">10</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>8%</td></tr>
+      <tr><td><span class="reward-amount">10</span> <span class="rarity-chip rarity-mythic">Mythic</span> hero shards</td><td>2%</td></tr>
     </table>
 
     <h3>Chest Gear Pool Notes</h3>
     <ul>
       <li>Gear sets: abyss, bastion, divine, pyro, reaper, titanbane, viper</li>
       <li>Slots: belt, boots, chestplate, elixir, helmet, necklace, ring, weapon_1, weapon_2, weapon_3</li>
-      <li>The exact final piece is selected by authoritative cloud or backend gear-pool logic.</li>
+      <li>The runtime configuration includes 10 unique weapons. The exact final piece is selected by the authoritative cloud gear-pool builder.</li>
     </ul>
 
-    <h2>Campaign Gear Drops</h2>
-    <p class="legal-muted">Current runtime behavior reflects code-level drop-count clamping.</p>
-    <table class="legal-table">
-      <tr><th>Drop count</th><th>Effective chance</th></tr>
-      <tr><td>2 drops</td><td>90%</td></tr>
-      <tr><td>3 drops</td><td>10%</td></tr>
+    <h2>Campaign Level Rewards</h2>
+    <p class="legal-muted">
+      These are the current rates for a completed normal campaign level. Gear quantity is rolled first, then each awarded
+      gear item independently rolls its rarity. Duplicates are allowed. Gold and essence are also awarded on every
+      completion, but scale with the campaign reward curve rather than a fixed chapter amount.
+    </p>
+    <table class="legal-table campaign-rates">
+      <tr><th>Chapter</th><th>Gear quantity odds</th><th>Rarity per gear item</th><th>Random hero shard</th><th>One-time first-clear reward</th></tr>
+      <tr><td>1</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>1 Silver Key</td></tr>
+      <tr><td>2</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>30 shards for one guaranteed-unowned Uncommon hero</td></tr>
+      <tr><td>3</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>3 Silver Keys</td></tr>
+      <tr><td>4</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys</td></tr>
+      <tr><td>5</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys</td></tr>
+      <tr><td>6</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>7</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>8</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>9</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>10</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>11</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>12</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Gold Keys</td></tr>
+      <tr><td>13</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys</td></tr>
+      <tr><td>14</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys</td></tr>
+      <tr><td>15</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys</td></tr>
+      <tr><td>16</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
+      <tr><td>17</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
+      <tr><td>18</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
+      <tr><td>19</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
+      <tr><td>20</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>5 Champion Keys</td></tr>
+      <tr><td>21</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys</td></tr>
+      <tr><td>22</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys</td></tr>
+      <tr><td>23</td><td>2/3/4: 20% / 50% / 30%</td><td>60% Uncommon, 30% Rare, 8% Epic, 2% Legendary</td><td>40% for 1 eligible hero shard</td><td>5 Ascendant Keys</td></tr>
+      <tr><td>24</td><td>2/3/4: 10% / 55% / 35%</td><td>50% Uncommon, 35% Rare, 11% Epic, 4% Legendary</td><td>50% for 1 eligible hero shard</td><td>5 Ascendant Keys</td></tr>
+      <tr><td>25</td><td>2/3/4: 5% / 60% / 35%</td><td>30% Uncommon, 50% Rare, 15% Epic, 5% Legendary</td><td>60% for 1 eligible hero shard</td><td>5 Ascendant Keys</td></tr>
+      <tr><td>26</td><td>3/4: 60% / 40%</td><td>70% Rare, 21% Epic, 9% Legendary</td><td>75% for 1 eligible hero shard</td><td>10 Ascendant Keys</td></tr>
     </table>
+
+    <h3>Exact Individual Gear-Piece Rates</h3>
+    <p>
+      The campaign pool contains 80 pieces across eight equipment slots. The game first chooses a slot uniformly,
+      then chooses a piece uniformly within that slot; it does not choose uniformly from all 80 pieces.
+    </p>
     <table class="legal-table">
-      <tr><th>Rarity</th><th>Chance per gear drop</th></tr>
-      <tr><td>Common</td><td>65%</td></tr>
-      <tr><td>Uncommon</td><td>33%</td></tr>
-      <tr><td>Rare</td><td>2%</td></tr>
+      <tr><th>Slot group</th><th>Pieces in campaign pool</th><th>Chance for one named piece on one gear-drop roll</th></tr>
+      <tr><td>Weapon</td><td>31 (21 set weapons plus 10 unique weapons)</td><td>1 / (8 x 31) = 0.4032258%</td></tr>
+      <tr><td>Belt, boots, chestplate, elixir, helmet, necklace, or ring</td><td>7 per slot</td><td>1 / (8 x 7) = 1.7857143%</td></tr>
     </table>
-    <ul>
-      <li>Completion scaling applies after the roll: rolled drop count is multiplied by completion percentage, then floored.</li>
-    </ul>
+    <p class="legal-muted">
+      For a particular piece at a particular rarity, multiply the piece chance by that chapter's rarity chance. For example,
+      a named non-weapon piece at Rare in Chapter 1 is 1/56 x 2% = 0.0357143% per gear-drop roll.
+      When a level awards more than one gear item, each roll is independent.
+    </p>
 
     <h2>Hero Delve Gear Drops</h2>
+    <p class="legal-muted">The configured quantity table currently resolves to exactly three drops before completion scaling. Duplicates are allowed.</p>
     <table class="legal-table">
       <tr><th>Drop count</th><th>Effective chance</th></tr>
       <tr><td>3 drops</td><td>100%</td></tr>
@@ -130,8 +215,8 @@
     <table class="legal-table">
       <tr><th>Rarity</th><th>Chance per gear drop</th></tr>
       <tr><td>Common</td><td>65%</td></tr>
-      <tr><td>Uncommon</td><td>33%</td></tr>
-      <tr><td>Rare</td><td>2%</td></tr>
+      <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>33%</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>2%</td></tr>
     </table>
 
     <h2>Hero Delve Shard Rewards</h2>
@@ -148,27 +233,27 @@
     <h3>Target hero rarity</h3>
     <table class="legal-table">
       <tr><th>Hero rarity</th><th>Chance</th></tr>
-      <tr><td>Uncommon</td><td>35%</td></tr>
-      <tr><td>Rare</td><td>30%</td></tr>
-      <tr><td>Epic</td><td>20%</td></tr>
-      <tr><td>Legendary</td><td>10%</td></tr>
-      <tr><td>Mythic</td><td>5%</td></tr>
+      <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>35%</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>30%</td></tr>
+      <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>20%</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>10%</td></tr>
+      <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>5%</td></tr>
     </table>
     <p>Within each chosen rarity, target hero selection is uniform across eligible heroes.</p>
 
     <h2>Mission Random Gear Rewards</h2>
     <ul>
-      <li>For mission rewards like random common, uncommon, rare, or epic gear, rarity is fixed by reward definition.</li>
-      <li>The specific piece is selected uniformly from the configured authoritative pool for that reward type.</li>
+      <li>For mission rewards like random common, uncommon, rare, or epic gear, rarity is fixed by the reward definition.</li>
+      <li>The specific piece is selected uniformly from the authoritative full gear-piece list for that reward type.</li>
     </ul>
 
     <h2>Run Upgrade Shop Offer Rarity</h2>
     <table class="legal-table">
       <tr><th>Rarity</th><th>Relative chance</th></tr>
       <tr><td>Common</td><td>60%</td></tr>
-      <tr><td>Rare</td><td>30%</td></tr>
-      <tr><td>Epic</td><td>9%</td></tr>
-      <tr><td>Legendary</td><td>1%</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>30%</td></tr>
+      <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>9%</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>1%</td></tr>
     </table>
     <p>Final observed odds depend on currently eligible, non-maxed upgrades at the time of roll.</p>
 
@@ -176,7 +261,7 @@
     <p>
       Guild daily rewards are currently level or tier-based rather than one simple weighted table.
       Reward quantity, rarity bands, and eligible pools vary by guild level or tier.
-      Each guild daily claim also grants 50 gems.
+      Each guild daily claim also grants <span class="reward-amount">50</span> gems.
     </p>
 
     <div class="legal-footer">
