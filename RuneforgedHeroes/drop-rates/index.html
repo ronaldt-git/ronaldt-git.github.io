@@ -12,6 +12,8 @@
     :root {
       --legal-accent: #ffcf7d;
       --reward-amount: #FFDC00;
+      --common-base: #524F4E;
+      --common-display: #6B6867;
       --uncommon-base: #3C8162;
       --uncommon-display: #4EC16E;
       --rare-base: #3D568D;
@@ -47,6 +49,7 @@
       white-space: nowrap;
     }
 
+    .rarity-common { background: var(--common-base); color: var(--common-display); }
     .rarity-uncommon { background: var(--uncommon-base); color: var(--uncommon-display); }
     .rarity-rare { background: var(--rare-base); color: var(--rare-display); }
     .rarity-epic { background: var(--epic-base); color: var(--epic-display); }
@@ -60,6 +63,32 @@
     .campaign-rates td:nth-child(5) {
       color: var(--reward-amount);
       font-weight: 800;
+    }
+
+    .reward-icon {
+      width: 1.35em;
+      height: 1.35em;
+      margin: 0 0.22em 0 0.12em;
+      object-fit: contain;
+      vertical-align: -0.28em;
+    }
+
+    .key-icon {
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: -0.36em;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
@@ -84,48 +113,48 @@
     <p class="legal-muted">Configured weights total 100, so listed percentages are direct odds.</p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td><span class="reward-amount">30,000</span> essence (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
-      <tr><td><span class="reward-amount">30,000</span> gold (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
-      <tr><td><span class="reward-amount">50</span> gems</td><td>20%</td></tr>
-      <tr><td><span class="reward-amount">1</span> silver key</td><td>13%</td></tr>
-      <tr><td><span class="reward-amount">1</span> gold key</td><td>7%</td></tr>
-      <tr><td><span class="reward-amount">300</span> gems</td><td>5%</td></tr>
-      <tr><td><span class="reward-amount">3</span> <span class="universal-shard">universal shards</span></td><td>3%</td></tr>
-      <tr><td><span class="reward-amount">10</span> <span class="universal-shard">universal shards</span></td><td>2%</td></tr>
+      <tr><td><span class="reward-amount">30,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden"> essence</span> (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
+      <tr><td><span class="reward-amount">30,000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden"> gold</span> (Ch. 1-9), <span class="reward-amount">75,000</span> (Ch. 10-19), or <span class="reward-amount">150,000</span> (Ch. 20+)</td><td>25%</td></tr>
+      <tr><td><span class="reward-amount">50</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td><td>20%</td></tr>
+      <tr><td><span class="reward-amount">1</span> Silver Key<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td><td>13%</td></tr>
+      <tr><td><span class="reward-amount">1</span> Gold Key<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td><td>7%</td></tr>
+      <tr><td><span class="reward-amount">300</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></td><td>5%</td></tr>
+      <tr><td><span class="reward-amount">3</span> <span class="universal-shard">Universal Shards</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/UniversalHeroShards.png" alt=""></td><td>3%</td></tr>
+      <tr><td><span class="reward-amount">10</span> <span class="universal-shard">Universal Shards</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/UniversalHeroShards.png" alt=""></td><td>2%</td></tr>
     </table>
     <ul>
       <li>1st daily spin: free</li>
       <li>2nd daily spin: rewarded ad</li>
-      <li>3rd and later daily spins: <span class="reward-amount">120</span> gems each</li>
+      <li>3rd and later daily spins: <span class="reward-amount">120</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span> each</li>
     </ul>
 
     <h2>Chest Opening</h2>
     <p class="legal-muted">Each chest table totals 100, so listed percentages are direct odds.</p>
 
     <h3>Silver Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">100</span></p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">100</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td>Essence worth 12.5% of current campaign-gold curve value</td><td>25%</td></tr>
-      <tr><td>Gold worth 12.5% of current campaign-gold curve value</td><td>15%</td></tr>
-      <tr><td><span class="reward-amount">1</span> common gear piece</td><td>40%</td></tr>
+      <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden">Essence </span>worth 12.5% of current campaign-gold curve value</td><td>25%</td></tr>
+      <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden">Gold </span>worth 12.5% of current campaign-gold curve value</td><td>15%</td></tr>
+      <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-common">Common</span> gear piece</td><td>40%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> gear piece</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span> gear piece</td><td>5%</td></tr>
     </table>
 
     <h3>Gold Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">250</span></p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">250</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
-      <tr><td>Essence worth 33.33% of current campaign-gold curve value</td><td>25%</td></tr>
-      <tr><td>Gold worth 33.33% of current campaign-gold curve value</td><td>15%</td></tr>
+      <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/essenceIcon.png" alt=""><span class="visually-hidden">Essence </span>worth 33.33% of current campaign-gold curve value</td><td>25%</td></tr>
+      <tr><td><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Coin_Gold.png" alt=""><span class="visually-hidden">Gold </span>worth 33.33% of current campaign-gold curve value</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> gear piece</td><td>40%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-rare">Rare</span> gear piece</td><td>15%</td></tr>
       <tr><td><span class="reward-amount">1</span> <span class="rarity-chip rarity-epic">Epic</span> gear piece</td><td>5%</td></tr>
     </table>
 
     <h3>Champion Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">400</span></p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">400</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td><span class="reward-amount">5</span> <span class="rarity-chip rarity-uncommon">Uncommon</span> hero shards</td><td>40%</td></tr>
@@ -136,7 +165,7 @@
     </table>
 
     <h3>Ascendant Chest</h3>
-    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">1000</span></p>
+    <p class="legal-muted">Gem cost fallback: <span class="reward-amount">1000</span><img class="reward-icon" src="/img/runeforged-heroes/rewards/ItemIcon_Gem_Diamond_Blue.png" alt=""><span class="visually-hidden"> gems</span></p>
     <table class="legal-table">
       <tr><th>Reward</th><th>Chance</th></tr>
       <tr><td><span class="reward-amount">3</span> <span class="rarity-chip rarity-legendary">Legendary</span> hero shards</td><td>22%</td></tr>
@@ -162,32 +191,32 @@
     </p>
     <table class="legal-table campaign-rates">
       <tr><th>Chapter</th><th>Gear quantity odds</th><th>Rarity per gear item</th><th>Random hero shard</th><th>One-time first-clear reward</th></tr>
-      <tr><td>1</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>1 Silver Key</td></tr>
+      <tr><td>1</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>1 Silver Key<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
       <tr><td>2</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>30 shards for one guaranteed-unowned Uncommon hero</td></tr>
-      <tr><td>3</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>3 Silver Keys</td></tr>
-      <tr><td>4</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys</td></tr>
-      <tr><td>5</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys</td></tr>
-      <tr><td>6</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>7</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>8</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>9</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>10</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>11</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>12</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Gold Keys</td></tr>
-      <tr><td>13</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys</td></tr>
-      <tr><td>14</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys</td></tr>
-      <tr><td>15</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys</td></tr>
-      <tr><td>16</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
-      <tr><td>17</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
-      <tr><td>18</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
-      <tr><td>19</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys</td></tr>
-      <tr><td>20</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>5 Champion Keys</td></tr>
-      <tr><td>21</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys</td></tr>
-      <tr><td>22</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys</td></tr>
-      <tr><td>23</td><td>2/3/4: 20% / 50% / 30%</td><td>60% Uncommon, 30% Rare, 8% Epic, 2% Legendary</td><td>40% for 1 eligible hero shard</td><td>5 Ascendant Keys</td></tr>
-      <tr><td>24</td><td>2/3/4: 10% / 55% / 35%</td><td>50% Uncommon, 35% Rare, 11% Epic, 4% Legendary</td><td>50% for 1 eligible hero shard</td><td>5 Ascendant Keys</td></tr>
-      <tr><td>25</td><td>2/3/4: 5% / 60% / 35%</td><td>30% Uncommon, 50% Rare, 15% Epic, 5% Legendary</td><td>60% for 1 eligible hero shard</td><td>5 Ascendant Keys</td></tr>
-      <tr><td>26</td><td>3/4: 60% / 40%</td><td>70% Rare, 21% Epic, 9% Legendary</td><td>75% for 1 eligible hero shard</td><td>10 Ascendant Keys</td></tr>
+      <tr><td>3</td><td>1/2/3/4: 20% / 50% / 20% / 10%</td><td>65% Common, 33% Uncommon, 2% Rare</td><td>--</td><td>3 Silver Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
+      <tr><td>4</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
+      <tr><td>5</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Silver Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_silver.png" alt=""></td></tr>
+      <tr><td>6</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>7</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>8</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>9</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>10</td><td>1/2/3/4: 10% / 35% / 40% / 15%</td><td>60% Common, 36% Uncommon, 4% Rare</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>11</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>12</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>13</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>14</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>15</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>5 Gold Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_gold.png" alt=""></td></tr>
+      <tr><td>16</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
+      <tr><td>17</td><td>2/3/4: 40% / 40% / 20%</td><td>40% Common, 54% Uncommon, 4% Rare, 2% Epic</td><td>--</td><td>3 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
+      <tr><td>18</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
+      <tr><td>19</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>3 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
+      <tr><td>20</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>--</td><td>5 Champion Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_champion.png" alt=""></td></tr>
+      <tr><td>21</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>22</td><td>2/3/4: 35% / 40% / 25%</td><td>20% Common, 70% Uncommon, 7% Rare, 3% Epic</td><td>30% for 1 eligible hero shard</td><td>3 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>23</td><td>2/3/4: 20% / 50% / 30%</td><td>60% Uncommon, 30% Rare, 8% Epic, 2% Legendary</td><td>40% for 1 eligible hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>24</td><td>2/3/4: 10% / 55% / 35%</td><td>50% Uncommon, 35% Rare, 11% Epic, 4% Legendary</td><td>50% for 1 eligible hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>25</td><td>2/3/4: 5% / 60% / 35%</td><td>30% Uncommon, 50% Rare, 15% Epic, 5% Legendary</td><td>60% for 1 eligible hero shard</td><td>5 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
+      <tr><td>26</td><td>3/4: 60% / 40%</td><td>70% Rare, 21% Epic, 9% Legendary</td><td>75% for 1 eligible hero shard</td><td>10 Ascendant Keys<img class="reward-icon key-icon" src="/img/runeforged-heroes/rewards/chestkey_ascendant.png" alt=""></td></tr>
     </table>
 
     <h3>Exact Individual Gear-Piece Rates</h3>
@@ -214,7 +243,7 @@
     </table>
     <table class="legal-table">
       <tr><th>Rarity</th><th>Chance per gear drop</th></tr>
-      <tr><td>Common</td><td>65%</td></tr>
+      <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>65%</td></tr>
       <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>33%</td></tr>
       <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>2%</td></tr>
     </table>
@@ -250,7 +279,7 @@
     <h2>Run Upgrade Shop Offer Rarity</h2>
     <table class="legal-table">
       <tr><th>Rarity</th><th>Relative chance</th></tr>
-      <tr><td>Common</td><td>60%</td></tr>
+      <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>60%</td></tr>
       <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>30%</td></tr>
       <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>9%</td></tr>
       <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>1%</td></tr>
