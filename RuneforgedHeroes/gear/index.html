@@ -50,6 +50,35 @@
     .rarity-legendary { background: var(--legendary-base); color: var(--legendary-display); }
     .rarity-mythic { background: var(--mythic-base); color: var(--mythic-display); }
 
+    .guide-title,
+    .set-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .guide-title {
+      margin-bottom: 12px;
+    }
+
+    .guide-title h1 {
+      margin: 0;
+    }
+
+    .guide-icon,
+    .stat-icon {
+      width: 1.25em;
+      height: 1.25em;
+      object-fit: contain;
+      vertical-align: -0.24em;
+    }
+
+    .guide-icon {
+      width: 54px;
+      height: 54px;
+      filter: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.35));
+    }
+
     .gear-table-wrap {
       margin: 10px 0 18px;
       overflow-x: auto;
@@ -101,7 +130,7 @@
     </nav>
 
     <div class="legal-kicker">Runeforged Heroes</div>
-    <h1>Gear Guide</h1>
+    <div class="guide-title"><img class="guide-icon" src="/img/runeforged-heroes/gear/ItemIcon_Gear_Armor.png" alt=""><h1>Gear Guide</h1></div>
     <p class="legal-muted">Gear rarity stats, set bonuses, and unique weapon bonuses.</p>
 
     <h2>How Gear Works</h2>
@@ -113,7 +142,7 @@
     </ul>
 
     <h2>Base Stats By Rarity</h2>
-    <h3>Belt, Boots, Chestplate, and Helmet</h3>
+    <h3><img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Health.png" alt=""> Belt, Boots, Chestplate, and Helmet <img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Gear_Shield_Metal.png" alt=""></h3>
     <div class="gear-table-wrap"><table class="legal-table">
       <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
       <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>600 HP</td><td>Starting value</td></tr>
@@ -125,7 +154,7 @@
       <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>15,000 HP, 7% Damage Reduction</td><td>+5,000 HP, +2% Damage Reduction</td></tr>
     </table></div>
 
-    <h3>Ring and Necklace</h3>
+    <h3><img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Attack.png" alt=""> Ring and Necklace <img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Critical.png" alt=""></h3>
     <div class="gear-table-wrap"><table class="legal-table">
       <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
       <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>15 Attack</td><td>Starting value</td></tr>
@@ -137,7 +166,7 @@
       <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>400 Attack, 50% Crit Damage</td><td>+150 Attack, +15% Crit Damage</td></tr>
     </table></div>
 
-    <h3>Elixir</h3>
+    <h3><img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Attack.png" alt=""> Elixir <img class="stat-icon" src="/img/runeforged-heroes/gear/ManaDrop.png" alt=""></h3>
     <div class="gear-table-wrap"><table class="legal-table">
       <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
       <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>15 Attack</td><td>Starting value</td></tr>
@@ -149,7 +178,7 @@
       <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>400 Attack, 50% Mana Generation</td><td>+150 Attack, +15% Mana Generation</td></tr>
     </table></div>
 
-    <h3>Weapon</h3>
+    <h3><img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Attack.png" alt=""> Weapon <img class="stat-icon" src="/img/runeforged-heroes/gear/Stat_CriticalChance_02.png" alt=""></h3>
     <p class="legal-muted">Weapon Attack means Melee Attack, Ranged Attack, or Magic Attack based on the weapon's damage school.</p>
     <div class="gear-table-wrap"><table class="legal-table">
       <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
@@ -165,13 +194,13 @@
     <h2>Gear Sets</h2>
     <p class="legal-muted">Each set contains a Belt, Boots, Chestplate, Elixir, Helmet, Necklace, Ring, and one Melee, Ranged, and Magical weapon.</p>
 
-    <section class="set-card"><h3>Abyss</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 10% chance to apply 1 Plagued.</td></tr><tr><td>4</td><td>Each hit has a 10% chance to apply 1 Plagued. Deal 15% more damage to Plagued or Bleeding enemies.</td></tr><tr><td>6</td><td>Each hit has a 15% chance to apply 1 Plagued. Deal 30% more damage to Plagued or Bleeding enemies.</td></tr><tr><td>8</td><td>Each hit has a 20% chance to apply 1 Plagued. Deal 45% more damage to Plagued or Bleeding enemies.</td></tr></table></div><p class="set-pieces">Weapons: Axe (Melee), Bow (Ranged), Sceptre (Magical).</p></section>
-    <section class="set-card"><h3>Bastion</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 15% Max HP.</td></tr><tr><td>4</td><td>Gain 30% Max HP and 5% Damage Reduction.</td></tr><tr><td>6</td><td>Gain 50% Max HP and 10% Damage Reduction.</td></tr><tr><td>8</td><td>Gain 75% Max HP, 15% Damage Reduction, and decay 1 additional negative-status stack each turn.</td></tr></table></div><p class="set-pieces">Weapons: Greathammer (Melee), Crossbow (Ranged), Staff (Magical).</p></section>
-    <section class="set-card"><h3>Divine</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 30% Healing Done.</td></tr><tr><td>4</td><td>Gain 30% Healing Done. When healing or shielding, have a 15% chance to give an ally 1 Blessed.</td></tr><tr><td>6</td><td>Gain 75% Healing Done, decay 1 additional negative-status stack each turn, and have a 25% chance to give an ally 1 Blessed when healing or shielding.</td></tr><tr><td>8</td><td>Gain 100% Healing Done, decay 2 additional negative-status stacks each turn, and have a 50% chance to give an ally 1 Blessed when healing or shielding.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
-    <section class="set-card"><h3>Pyro</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 10% chance to apply 1 Burning.</td></tr><tr><td>4</td><td>Each hit has a 10% chance to apply 1 Burning. Deal 15% more damage to Burning enemies.</td></tr><tr><td>6</td><td>Each hit has a 15% chance to apply 1 Burning. Deal 30% more damage to Burning enemies.</td></tr><tr><td>8</td><td>Each hit has a 30% chance to apply 1 Burning. Deal 60% more damage to Burning enemies.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
-    <section class="set-card"><h3>Reaper</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 10% Crit Chance.</td></tr><tr><td>4</td><td>Gain 15% Crit Chance.</td></tr><tr><td>6</td><td>Gain 15% Crit Chance and 50% Crit Damage.</td></tr><tr><td>8</td><td>Gain 20% Crit Chance and 75% Crit Damage.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Crossbow (Ranged), Sceptre (Magical).</p></section>
-    <section class="set-card"><h3>Titanbane</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Deal 15% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>4</td><td>Deal 30% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>6</td><td>Deal 50% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>8</td><td>Deal 100% more damage and gain 20% Crit Chance against enemies with at least 25% more Max HP than you.</td></tr></table></div><p class="set-pieces">Weapons: Axe (Melee), Bow (Ranged), Sceptre (Magical).</p></section>
-    <section class="set-card"><h3>Viper</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 20% chance to apply 1 Poisoned.</td></tr><tr><td>4</td><td>Each hit has a 20% chance to apply 1 Poisoned. Deal 15% more damage to Poisoned enemies.</td></tr><tr><td>6</td><td>Each hit has a 25% chance to apply 1 Poisoned. Deal 30% more damage to Poisoned enemies.</td></tr><tr><td>8</td><td>Each hit has a 30% chance to apply 1 Poisoned. Deal 60% more damage to Poisoned enemies.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/status_plagued.png" alt=""> Abyss <img class="stat-icon" src="/img/runeforged-heroes/gear/status_bloodDrop.png" alt=""></h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 10% chance to apply 1 Plagued.</td></tr><tr><td>4</td><td>Each hit has a 10% chance to apply 1 Plagued. Deal 15% more damage to Plagued or Bleeding enemies.</td></tr><tr><td>6</td><td>Each hit has a 15% chance to apply 1 Plagued. Deal 30% more damage to Plagued or Bleeding enemies.</td></tr><tr><td>8</td><td>Each hit has a 20% chance to apply 1 Plagued. Deal 45% more damage to Plagued or Bleeding enemies.</td></tr></table></div><p class="set-pieces">Weapons: Axe (Melee), Bow (Ranged), Sceptre (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Gear_Shield_Metal.png" alt=""> Bastion <img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Health.png" alt=""></h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 15% Max HP.</td></tr><tr><td>4</td><td>Gain 30% Max HP and 5% Damage Reduction.</td></tr><tr><td>6</td><td>Gain 50% Max HP and 10% Damage Reduction.</td></tr><tr><td>8</td><td>Gain 75% Max HP, 15% Damage Reduction, and decay 1 additional negative-status stack each turn.</td></tr></table></div><p class="set-pieces">Weapons: Greathammer (Melee), Crossbow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/status_blessed.png" alt=""> Divine</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 30% Healing Done.</td></tr><tr><td>4</td><td>Gain 30% Healing Done. When healing or shielding, have a 15% chance to give an ally 1 Blessed.</td></tr><tr><td>6</td><td>Gain 75% Healing Done, decay 1 additional negative-status stack each turn, and have a 25% chance to give an ally 1 Blessed when healing or shielding.</td></tr><tr><td>8</td><td>Gain 100% Healing Done, decay 2 additional negative-status stacks each turn, and have a 50% chance to give an ally 1 Blessed when healing or shielding.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/status_burning.png" alt=""> Pyro</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 10% chance to apply 1 Burning.</td></tr><tr><td>4</td><td>Each hit has a 10% chance to apply 1 Burning. Deal 15% more damage to Burning enemies.</td></tr><tr><td>6</td><td>Each hit has a 15% chance to apply 1 Burning. Deal 30% more damage to Burning enemies.</td></tr><tr><td>8</td><td>Each hit has a 30% chance to apply 1 Burning. Deal 60% more damage to Burning enemies.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/Stat_CriticalChance_02.png" alt=""> Reaper <img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Critical.png" alt=""></h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 10% Crit Chance.</td></tr><tr><td>4</td><td>Gain 15% Crit Chance.</td></tr><tr><td>6</td><td>Gain 15% Crit Chance and 50% Crit Damage.</td></tr><tr><td>8</td><td>Gain 20% Crit Chance and 75% Crit Damage.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Crossbow (Ranged), Sceptre (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/ItemIcon_Skill_Attack.png" alt=""> Titanbane</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Deal 15% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>4</td><td>Deal 30% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>6</td><td>Deal 50% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>8</td><td>Deal 100% more damage and gain 20% Crit Chance against enemies with at least 25% more Max HP than you.</td></tr></table></div><p class="set-pieces">Weapons: Axe (Melee), Bow (Ranged), Sceptre (Magical).</p></section>
+    <section class="set-card"><h3><img class="stat-icon" src="/img/runeforged-heroes/gear/status_Poisoned.png" alt=""> Viper</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 20% chance to apply 1 Poisoned.</td></tr><tr><td>4</td><td>Each hit has a 20% chance to apply 1 Poisoned. Deal 15% more damage to Poisoned enemies.</td></tr><tr><td>6</td><td>Each hit has a 25% chance to apply 1 Poisoned. Deal 30% more damage to Poisoned enemies.</td></tr><tr><td>8</td><td>Each hit has a 30% chance to apply 1 Poisoned. Deal 60% more damage to Poisoned enemies.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
 
     <h2>Unique Weapons</h2>
     <p class="legal-muted">Unique weapons never count toward a gear set. The values in each row are Common / Uncommon / Rare / Epic / Legendary / Legendary II / Mythic.</p>
@@ -179,7 +208,7 @@
       <tr><th>Weapon</th><th>School</th><th>Unique bonus by rarity</th></tr>
       <tr><td>Monstrous Blade</td><td>Melee</td><td>Crit Damage: 20% / 25% / 30% / 35% / 40% / 45% / 50%</td></tr>
       <tr><td>Energy Sword</td><td>Melee</td><td>Mana Generation: 10% / 15% / 20% / 25% / 30% / 35% / 40%</td></tr>
-      <tr><td>Vampiric Blade</td><td>Melee</td><td>Lifesteal: 4% / 5% / 6% / 7% / 8% / 9% / 11%</td></tr>
+      <tr><td>Vampiric Blade</td><td>Melee</td><td><img class="stat-icon" src="/img/runeforged-heroes/gear/lifestealIcon.png" alt=""> Lifesteal: 4% / 5% / 6% / 7% / 8% / 9% / 11%</td></tr>
       <tr><td>Gravitation Staff</td><td>Magical</td><td>Attack: 5% / 8% / 12% / 16% / 22% / 28% / 35%</td></tr>
       <tr><td>Revivifying Staff</td><td>Magical</td><td>Outgoing Healing: 25% / 30% / 35% / 40% / 50% / 60% / 70%</td></tr>
       <tr><td>Souleater Staff</td><td>Magical</td><td>Basic-attack Plague chance: 10% / 15% / 20% / 25% / 28% / 32% / 35%. Damage vs Plagued: 3% / 5% / 8% / 11% / 14% / 17% / 20%</td></tr>
