@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runeforged Heroes Gear Guide</title>
+  <meta name="description" content="Runeforged Heroes gear rarity stats, set bonuses, and unique weapon bonuses." />
+  <link rel="canonical" href="https://outleveledgames.com/RuneforgedHeroes/gear/" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="/css/legal.css" />
+  <style>
+    :root {
+      --legal-accent: #ffcf7d;
+      --common-base: #524F4E;
+      --common-display: #D7D3D1;
+      --uncommon-base: #3C8162;
+      --uncommon-display: #B7F4C9;
+      --rare-base: #3D568D;
+      --rare-display: #BDD0EA;
+      --epic-base: #615096;
+      --epic-display: #D4C2F4;
+      --legendary-base: #B17445;
+      --legendary-display: #F1D59D;
+      --mythic-base: #D70101;
+      --mythic-display: #FFB3B3;
+    }
+
+    .legal-wrap > h2 {
+      margin-top: 42px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255, 207, 125, 0.32);
+    }
+
+    .rarity-chip {
+      display: inline-block;
+      margin: 1px 2px;
+      padding: 1px 6px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.86em;
+      font-weight: 800;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    .rarity-common { background: var(--common-base); color: var(--common-display); }
+    .rarity-uncommon { background: var(--uncommon-base); color: var(--uncommon-display); }
+    .rarity-rare { background: var(--rare-base); color: var(--rare-display); }
+    .rarity-epic { background: var(--epic-base); color: var(--epic-display); }
+    .rarity-legendary { background: var(--legendary-base); color: var(--legendary-display); }
+    .rarity-mythic { background: var(--mythic-base); color: var(--mythic-display); }
+
+    .gear-table-wrap {
+      margin: 10px 0 18px;
+      overflow-x: auto;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+    }
+
+    .gear-table-wrap .legal-table {
+      min-width: 680px;
+      margin: 0;
+      border: 0;
+    }
+
+    .gear-table-wrap .legal-table th,
+    .gear-table-wrap .legal-table td {
+      border-width: 0 1px 1px 0;
+    }
+
+    .gear-table-wrap .legal-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .set-card {
+      margin: 22px 0;
+      padding: 20px;
+      border: 1px solid rgba(255, 207, 125, 0.24);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255, 207, 125, 0.09), rgba(255, 255, 255, 0.02));
+    }
+
+    .set-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .set-pieces {
+      margin: 16px 0 0;
+      color: var(--legal-muted);
+      font-size: 0.94rem;
+    }
+  </style>
+</head>
+<body class="legal-page gear-guide">
+  <main class="legal-wrap">
+    <nav class="legal-nav">
+      <a href="/">Back to Outleveled Games</a>
+      <a href="/RuneforgedHeroes/drop-rates/">Drop Rates</a>
+      <a href="/RuneforgedHeroes/privacy/">Privacy</a>
+      <a href="/RuneforgedHeroes/terms/">Terms</a>
+    </nav>
+
+    <div class="legal-kicker">Runeforged Heroes</div>
+    <h1>Gear Guide</h1>
+    <p class="legal-muted">Gear rarity stats, set bonuses, and unique weapon bonuses.</p>
+
+    <h2>How Gear Works</h2>
+    <ul>
+      <li>Every set piece uses the same stat formula for its slot and rarity. Two set pieces in the same slot and rarity have identical base stats.</li>
+      <li>Weapons use the shared weapon formula. Their attack applies to their damage school: Melee, Ranged, or Magical.</li>
+      <li>Set bonuses are not cumulative. At 8 pieces, only the 8-piece tier is active.</li>
+      <li>Unique weapons are not part of a set. They receive normal weapon base stats plus their listed unique bonus.</li>
+    </ul>
+
+    <h2>Base Stats By Rarity</h2>
+    <h3>Belt, Boots, Chestplate, and Helmet</h3>
+    <div class="gear-table-wrap"><table class="legal-table">
+      <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
+      <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>600 HP</td><td>Starting value</td></tr>
+      <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>1,500 HP, 1% Damage Reduction</td><td>+900 HP, +1% Damage Reduction</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>2,700 HP, 2% Damage Reduction</td><td>+1,200 HP, +1% Damage Reduction</td></tr>
+      <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>4,400 HP, 3% Damage Reduction</td><td>+1,700 HP, +1% Damage Reduction</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>7,500 HP, 4% Damage Reduction</td><td>+3,100 HP, +1% Damage Reduction</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary II</span></td><td>10,000 HP, 5% Damage Reduction</td><td>+2,500 HP, +1% Damage Reduction</td></tr>
+      <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>15,000 HP, 7% Damage Reduction</td><td>+5,000 HP, +2% Damage Reduction</td></tr>
+    </table></div>
+
+    <h3>Ring and Necklace</h3>
+    <div class="gear-table-wrap"><table class="legal-table">
+      <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
+      <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>15 Attack</td><td>Starting value</td></tr>
+      <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>40 Attack, 5% Crit Damage</td><td>+25 Attack, +5% Crit Damage</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>75 Attack, 10% Crit Damage</td><td>+35 Attack, +5% Crit Damage</td></tr>
+      <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>125 Attack, 15% Crit Damage</td><td>+50 Attack, +5% Crit Damage</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>175 Attack, 25% Crit Damage</td><td>+50 Attack, +10% Crit Damage</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary II</span></td><td>250 Attack, 35% Crit Damage</td><td>+75 Attack, +10% Crit Damage</td></tr>
+      <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>400 Attack, 50% Crit Damage</td><td>+150 Attack, +15% Crit Damage</td></tr>
+    </table></div>
+
+    <h3>Elixir</h3>
+    <div class="gear-table-wrap"><table class="legal-table">
+      <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
+      <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>15 Attack</td><td>Starting value</td></tr>
+      <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>40 Attack, 5% Mana Generation</td><td>+25 Attack, +5% Mana Generation</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>75 Attack, 10% Mana Generation</td><td>+35 Attack, +5% Mana Generation</td></tr>
+      <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>125 Attack, 15% Mana Generation</td><td>+50 Attack, +5% Mana Generation</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>175 Attack, 25% Mana Generation</td><td>+50 Attack, +10% Mana Generation</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary II</span></td><td>250 Attack, 35% Mana Generation</td><td>+75 Attack, +10% Mana Generation</td></tr>
+      <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>400 Attack, 50% Mana Generation</td><td>+150 Attack, +15% Mana Generation</td></tr>
+    </table></div>
+
+    <h3>Weapon</h3>
+    <p class="legal-muted">Weapon Attack means Melee Attack, Ranged Attack, or Magic Attack based on the weapon's damage school.</p>
+    <div class="gear-table-wrap"><table class="legal-table">
+      <tr><th>Rarity</th><th>Total stats</th><th>Change from previous rarity</th></tr>
+      <tr><td><span class="rarity-chip rarity-common">Common</span></td><td>20 Weapon Attack</td><td>Starting value</td></tr>
+      <tr><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>65 Weapon Attack, 5% Crit Chance</td><td>+45 Weapon Attack, +5% Crit Chance</td></tr>
+      <tr><td><span class="rarity-chip rarity-rare">Rare</span></td><td>115 Weapon Attack, 5% Crit Chance</td><td>+50 Weapon Attack</td></tr>
+      <tr><td><span class="rarity-chip rarity-epic">Epic</span></td><td>175 Weapon Attack, 15% Crit Chance</td><td>+60 Weapon Attack, +10% Crit Chance</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>250 Weapon Attack, 20% Crit Chance</td><td>+75 Weapon Attack, +5% Crit Chance</td></tr>
+      <tr><td><span class="rarity-chip rarity-legendary">Legendary II</span></td><td>350 Weapon Attack, 25% Crit Chance</td><td>+100 Weapon Attack, +5% Crit Chance</td></tr>
+      <tr><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>600 Weapon Attack, 35% Crit Chance</td><td>+250 Weapon Attack, +10% Crit Chance</td></tr>
+    </table></div>
+
+    <h2>Gear Sets</h2>
+    <p class="legal-muted">Each set contains a Belt, Boots, Chestplate, Elixir, Helmet, Necklace, Ring, and one Melee, Ranged, and Magical weapon.</p>
+
+    <section class="set-card"><h3>Abyss</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 10% chance to apply 1 Plagued.</td></tr><tr><td>4</td><td>Each hit has a 10% chance to apply 1 Plagued. Deal 15% more damage to Plagued or Bleeding enemies.</td></tr><tr><td>6</td><td>Each hit has a 15% chance to apply 1 Plagued. Deal 30% more damage to Plagued or Bleeding enemies.</td></tr><tr><td>8</td><td>Each hit has a 20% chance to apply 1 Plagued. Deal 45% more damage to Plagued or Bleeding enemies.</td></tr></table></div><p class="set-pieces">Weapons: Axe (Melee), Bow (Ranged), Sceptre (Magical).</p></section>
+    <section class="set-card"><h3>Bastion</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 15% Max HP.</td></tr><tr><td>4</td><td>Gain 30% Max HP and 5% Damage Reduction.</td></tr><tr><td>6</td><td>Gain 50% Max HP and 10% Damage Reduction.</td></tr><tr><td>8</td><td>Gain 75% Max HP, 15% Damage Reduction, and decay 1 additional negative-status stack each turn.</td></tr></table></div><p class="set-pieces">Weapons: Greathammer (Melee), Crossbow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3>Divine</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 30% Healing Done.</td></tr><tr><td>4</td><td>Gain 30% Healing Done. When healing or shielding, have a 15% chance to give an ally 1 Blessed.</td></tr><tr><td>6</td><td>Gain 75% Healing Done, decay 1 additional negative-status stack each turn, and have a 25% chance to give an ally 1 Blessed when healing or shielding.</td></tr><tr><td>8</td><td>Gain 100% Healing Done, decay 2 additional negative-status stacks each turn, and have a 50% chance to give an ally 1 Blessed when healing or shielding.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3>Pyro</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 10% chance to apply 1 Burning.</td></tr><tr><td>4</td><td>Each hit has a 10% chance to apply 1 Burning. Deal 15% more damage to Burning enemies.</td></tr><tr><td>6</td><td>Each hit has a 15% chance to apply 1 Burning. Deal 30% more damage to Burning enemies.</td></tr><tr><td>8</td><td>Each hit has a 30% chance to apply 1 Burning. Deal 60% more damage to Burning enemies.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
+    <section class="set-card"><h3>Reaper</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Gain 10% Crit Chance.</td></tr><tr><td>4</td><td>Gain 15% Crit Chance.</td></tr><tr><td>6</td><td>Gain 15% Crit Chance and 50% Crit Damage.</td></tr><tr><td>8</td><td>Gain 20% Crit Chance and 75% Crit Damage.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Crossbow (Ranged), Sceptre (Magical).</p></section>
+    <section class="set-card"><h3>Titanbane</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Deal 15% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>4</td><td>Deal 30% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>6</td><td>Deal 50% more damage to enemies with at least 25% more Max HP than you.</td></tr><tr><td>8</td><td>Deal 100% more damage and gain 20% Crit Chance against enemies with at least 25% more Max HP than you.</td></tr></table></div><p class="set-pieces">Weapons: Axe (Melee), Bow (Ranged), Sceptre (Magical).</p></section>
+    <section class="set-card"><h3>Viper</h3><div class="gear-table-wrap"><table class="legal-table"><tr><th>Pieces</th><th>Effect</th></tr><tr><td>2</td><td>Each hit has a 20% chance to apply 1 Poisoned.</td></tr><tr><td>4</td><td>Each hit has a 20% chance to apply 1 Poisoned. Deal 15% more damage to Poisoned enemies.</td></tr><tr><td>6</td><td>Each hit has a 25% chance to apply 1 Poisoned. Deal 30% more damage to Poisoned enemies.</td></tr><tr><td>8</td><td>Each hit has a 30% chance to apply 1 Poisoned. Deal 60% more damage to Poisoned enemies.</td></tr></table></div><p class="set-pieces">Weapons: Sword (Melee), Bow (Ranged), Staff (Magical).</p></section>
+
+    <h2>Unique Weapons</h2>
+    <p class="legal-muted">Unique weapons never count toward a gear set. The values in each row are Common / Uncommon / Rare / Epic / Legendary / Legendary II / Mythic.</p>
+    <div class="gear-table-wrap"><table class="legal-table">
+      <tr><th>Weapon</th><th>School</th><th>Unique bonus by rarity</th></tr>
+      <tr><td>Monstrous Blade</td><td>Melee</td><td>Crit Damage: 20% / 25% / 30% / 35% / 40% / 45% / 50%</td></tr>
+      <tr><td>Energy Sword</td><td>Melee</td><td>Mana Generation: 10% / 15% / 20% / 25% / 30% / 35% / 40%</td></tr>
+      <tr><td>Vampiric Blade</td><td>Melee</td><td>Lifesteal: 4% / 5% / 6% / 7% / 8% / 9% / 11%</td></tr>
+      <tr><td>Gravitation Staff</td><td>Magical</td><td>Attack: 5% / 8% / 12% / 16% / 22% / 28% / 35%</td></tr>
+      <tr><td>Revivifying Staff</td><td>Magical</td><td>Outgoing Healing: 25% / 30% / 35% / 40% / 50% / 60% / 70%</td></tr>
+      <tr><td>Souleater Staff</td><td>Magical</td><td>Basic-attack Plague chance: 10% / 15% / 20% / 25% / 28% / 32% / 35%. Damage vs Plagued: 3% / 5% / 8% / 11% / 14% / 17% / 20%</td></tr>
+      <tr><td>Dreaded Bow</td><td>Ranged</td><td>Basic-attack Plague chance: 10% / 15% / 20% / 25% / 28% / 32% / 35%. Damage vs Plagued: 3% / 5% / 8% / 11% / 14% / 17% / 20%</td></tr>
+      <tr><td>Beasteater Bow</td><td>Ranged</td><td>Attack: 5% / 8% / 12% / 16% / 22% / 28% / 35%</td></tr>
+      <tr><td>Soulcrusher</td><td>Melee</td><td>Basic-attack Plague chance: 10% / 15% / 20% / 25% / 28% / 32% / 35%. Damage vs Plagued: 3% / 5% / 8% / 11% / 14% / 17% / 20%</td></tr>
+      <tr><td>Dimension Down</td><td>Melee</td><td>Attack: 5% / 8% / 12% / 16% / 22% / 28% / 35%</td></tr>
+    </table></div>
+
+    <div class="legal-footer">Outleveled Games | <a href="mailto:outleveledgames@gmail.com">outleveledgames@gmail.com</a></div>
+  </main>
+</body>
+</html>
