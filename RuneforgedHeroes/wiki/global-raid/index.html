@@ -325,5 +325,46 @@
     <p>The specific boss kit, targeting rules, and status effects vary by boss. Refer to the in-game boss information and combat tooltips for the current encounter details.</p>
     <div class="wiki-footer">Outleveled Games | <a href="mailto:outleveledgames@gmail.com">outleveledgames@gmail.com</a></div>
   </main>
+  <script>
+    (() => {
+      const root = document.querySelector('.wiki-wrap');
+      const pattern = /(Level (1[0-2]|[1-9]) Power Runes?|Ascension Core)/g;
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (pattern.test(node.nodeValue)) textNodes.push(node);
+        pattern.lastIndex = 0;
+      }
+
+      textNodes.forEach((node) => {
+        const fragment = document.createDocumentFragment();
+        node.nodeValue.split(pattern).forEach((part) => {
+          if (!part || /^\d+$/.test(part)) return;
+          const levelMatch = part.match(/^Level (\d+) Power Runes?$/);
+
+          if (!levelMatch && part !== 'Ascension Core') {
+            fragment.appendChild(document.createTextNode(part));
+            return;
+          }
+
+          const term = document.createElement('span');
+          term.className = 'wiki-reward-term';
+          term.appendChild(document.createTextNode(part));
+
+          const icon = document.createElement('img');
+          icon.className = levelMatch ? 'wiki-inline-icon wiki-rune-icon' : 'wiki-inline-icon';
+          icon.src = levelMatch
+            ? `/img/runeforged-heroes/mechanics/Lvl${levelMatch[1]}.png`
+            : '/img/runeforged-heroes/mechanics/ascensionCore.png';
+          icon.alt = part;
+          term.appendChild(icon);
+          fragment.appendChild(term);
+        });
+        node.parentNode.replaceChild(fragment, node);
+      });
+    })();
+  </script>
 </body>
 </html>

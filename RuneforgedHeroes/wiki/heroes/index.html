@@ -8,11 +8,17 @@
   <link rel="canonical" href="https://outleveledgames.com/RuneforgedHeroes/wiki/heroes/" />
   <link rel="stylesheet" href="/css/runeforged-wiki.css" />
   <style>
-    .hero-table { min-width: 1220px; }
+    .hero-table { min-width: 1110px; }
     .hero-art { width: 52px; height: 72px; object-fit: contain; object-position: bottom; vertical-align: bottom; }
     .hero-table th:nth-child(1), .hero-table td:nth-child(1) { width: 62px; text-align: center; }
     .hero-table th:nth-child(2) { min-width: 105px; }
-    .hero-table th:nth-child(7), .hero-table th:nth-child(8) { min-width: 260px; }
+    .hero-table th:nth-child(7), .hero-table th:nth-child(8) { min-width: 210px; white-space: normal; }
+    .hero-table th button { width: 100%; padding: 0; border: 0; color: inherit; font: inherit; font-weight: 800; text-align: inherit; background: transparent; cursor: pointer; }
+    .hero-table th button:hover { color: #ffe7b8; }
+    .hero-table th button::after { margin-left: 6px; color: #ffcf7d; content: '↕'; font-size: 0.75em; }
+    .hero-table th[aria-sort="ascending"] button::after { content: '↑'; }
+    .hero-table th[aria-sort="descending"] button::after { content: '↓'; }
+    .hero-table th small { display: block; color: var(--wiki-muted); font-size: 0.78em; font-weight: 700; }
   </style>
 </head>
 <body class="wiki-page">
@@ -28,7 +34,7 @@
       <li>Values are cumulative at each star rank. Starting Shielded and Blessed stacks are granted at the start of a level or event.</li>
     </ul>
     <div class="wiki-table-wrap"><table class="wiki-table hero-table">
-      <tr><th>Art</th><th>Hero</th><th>Rarity</th><th>Damage type</th><th>Base HP</th><th>Base Attack</th><th>Roster bonus (1 / 2 / 3 / 4 / 5 stars)</th><th>Self bonus (2 / 3 / 4 / 5 stars)</th></tr>      <tr><td><img class="hero-art" src="/img/runeforged-heroes/heroes/Alexios_fullbody.png" alt="Alexios"></td><td>Alexios</td><td><span class="rarity-chip rarity-epic">Epic</span></td><td>Ranged</td><td>980</td><td>22</td><td>Attack Damage: +1 / +2 / +3 / +4 / +5%</td><td>Ranged Damage: +7 / +14 / +21 / +28%</td></tr>
+      <tr><th>Art</th><th>Hero</th><th>Rarity</th><th>Damage type</th><th>Base HP</th><th>Base Attack</th><th>Roster bonus<small>(1 / 2 / 3 / 4 / 5 stars)</small></th><th>Self bonus<small>(2 / 3 / 4 / 5 stars)</small></th></tr>      <tr><td><img class="hero-art" src="/img/runeforged-heroes/heroes/Alexios_fullbody.png" alt="Alexios"></td><td>Alexios</td><td><span class="rarity-chip rarity-epic">Epic</span></td><td>Ranged</td><td>980</td><td>22</td><td>Attack Damage: +1 / +2 / +3 / +4 / +5%</td><td>Ranged Damage: +7 / +14 / +21 / +28%</td></tr>
       <tr><td><img class="hero-art" src="/img/runeforged-heroes/heroes/Alrick_fullbody.png" alt="Alrick"></td><td>Alrick</td><td><span class="rarity-chip rarity-uncommon">Uncommon</span></td><td>Melee</td><td>1,440</td><td>13</td><td>Attack Damage: +0.5 / +1 / +1.5 / +2 / +3%</td><td>Damage Reduction: +2 / +4 / +7 / +10%</td></tr>
       <tr><td><img class="hero-art" src="/img/runeforged-heroes/heroes/Araego_fullbody.png" alt="Araego"></td><td>Araego</td><td><span class="rarity-chip rarity-mythic">Mythic</span></td><td>Melee</td><td>3,330</td><td>22</td><td>Damage Reduction: +0.5 / +1 / +1.5 / +2 / +2.5%</td><td>Starts Shielded: 2 / 4 / 6 / 8 stacks</td></tr>
       <tr><td><img class="hero-art" src="/img/runeforged-heroes/heroes/Aurelia_fullbody.png" alt="Aurelia"></td><td>Aurelia</td><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>Melee</td><td>2,890</td><td>23</td><td>Damage Reduction: +0.4 / +0.8 / +1.2 / +1.6 / +2%</td><td>Starts Blessed: 1 / 2 / 3 / 4 stacks</td></tr>
@@ -62,5 +68,46 @@
       <tr><td><img class="hero-art" src="/img/runeforged-heroes/heroes/voltus_fullbody.png" alt="Voltus"></td><td>Voltus</td><td><span class="rarity-chip rarity-legendary">Legendary</span></td><td>Magical</td><td>1,900</td><td>26</td><td>Elemental Damage: +1 / +1.5 / +2.25 / +3 / +4%</td><td>Lightning Damage: +5 / +15 / +25 / +40%</td></tr>    </table></div>
     <div class="wiki-footer">Outleveled Games | <a href="mailto:outleveledgames@gmail.com">outleveledgames@gmail.com</a></div>
   </main>
+  <script>
+    (() => {
+      const table = document.querySelector('.hero-table');
+      const headerRow = table.rows[0];
+      const rarityOrder = { Common: 0, Uncommon: 1, Rare: 2, Epic: 3, Legendary: 4, Mythic: 5 };
+
+      [...headerRow.cells].forEach((header, column) => {
+        const label = header.innerHTML;
+        header.innerHTML = `<button type="button">${label}</button>`;
+        header.setAttribute('aria-sort', 'none');
+
+        header.querySelector('button').addEventListener('click', () => {
+          const ascending = header.getAttribute('aria-sort') !== 'ascending';
+          const rows = [...table.rows].slice(1);
+
+          rows.sort((left, right) => {
+            const value = (row) => row.cells[column].textContent.trim();
+            const leftValue = value(left);
+            const rightValue = value(right);
+            let comparison;
+
+            if (column === 0) {
+              comparison = left.cells[column].querySelector('img').alt.localeCompare(right.cells[column].querySelector('img').alt);
+            } else if (column === 2) {
+              comparison = rarityOrder[leftValue] - rarityOrder[rightValue];
+            } else if (column === 4 || column === 5) {
+              comparison = Number(leftValue.replace(/,/g, '')) - Number(rightValue.replace(/,/g, ''));
+            } else {
+              comparison = leftValue.localeCompare(rightValue, undefined, { numeric: true });
+            }
+
+            return ascending ? comparison : -comparison;
+          });
+
+          [...headerRow.cells].forEach((cell) => cell.setAttribute('aria-sort', 'none'));
+          header.setAttribute('aria-sort', ascending ? 'ascending' : 'descending');
+          rows.forEach((row) => table.appendChild(row));
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
