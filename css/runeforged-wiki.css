@@ -1,0 +1,66 @@
+:root {
+  --wiki-bg: #081018;
+  --wiki-surface: rgba(13, 24, 33, 0.96);
+  --wiki-border: rgba(255, 255, 255, 0.10);
+  --wiki-text: #eef4fb;
+  --wiki-muted: #a9b6c5;
+  --wiki-accent: #ffcf7d;
+  --common-base: #524F4E;
+  --common-display: #D7D3D1;
+  --uncommon-base: #3C8162;
+  --uncommon-display: #B7F4C9;
+  --rare-base: #3D568D;
+  --rare-display: #BDD0EA;
+  --epic-base: #615096;
+  --epic-display: #D4C2F4;
+  --legendary-base: #B17445;
+  --legendary-display: #F1D59D;
+  --mythic-base: #D70101;
+  --mythic-display: #FFB3B3;
+}
+
+body.wiki-page {
+  margin: 0;
+  padding: 24px 16px 48px;
+  color: var(--wiki-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  background: radial-gradient(circle at top, rgba(255, 207, 125, 0.10), transparent 28%), linear-gradient(180deg, var(--wiki-bg) 0%, #0d1821 100%);
+}
+
+.wiki-wrap { max-width: 1120px; margin: 0 auto; padding: 22px 20px 24px; border: 1px solid var(--wiki-border); border-radius: 18px; background: var(--wiki-surface); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28); }
+.wiki-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.wiki-nav a, .wiki-card { border: 1px solid var(--wiki-border); border-radius: 12px; color: var(--wiki-text); text-decoration: none; background: rgba(255, 255, 255, 0.04); }
+.wiki-nav a { padding: 8px 12px; border-radius: 999px; }
+.wiki-nav a:hover, .wiki-card:hover { border-color: rgba(255, 207, 125, 0.58); background: rgba(255, 207, 125, 0.08); }
+.wiki-kicker { display: inline-block; margin-bottom: 10px; padding: 6px 10px; border: 1px solid rgba(255, 207, 125, 0.28); border-radius: 999px; color: #ffe7b8; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.wiki-wrap h1, .wiki-wrap h2, .wiki-wrap h3 { line-height: 1.2; }
+.wiki-wrap h2 { margin-top: 42px; padding-top: 26px; border-top: 1px solid rgba(255, 207, 125, 0.32); }
+.wiki-muted { color: var(--wiki-muted); }
+.wiki-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+.wiki-card { display: block; min-height: 148px; padding: 18px; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease; }
+.wiki-card:hover { transform: translateY(-3px); }
+.wiki-card h2 { margin: 0 0 10px; padding: 0; border: 0; font-size: 1.25rem; }
+.wiki-card p { margin: 0; color: var(--wiki-muted); }
+.wiki-card-soon { opacity: 0.64; cursor: default; }
+.wiki-card-soon:hover { transform: none; border-color: var(--wiki-border); background: rgba(255, 255, 255, 0.04); }
+.wiki-table-wrap { overflow-x: auto; margin: 12px 0 20px; border: 1px solid var(--wiki-border); border-radius: 12px; }
+.wiki-table { width: 100%; min-width: 680px; border-collapse: collapse; }
+.wiki-table th, .wiki-table td { padding: 10px; border-right: 1px solid var(--wiki-border); border-bottom: 1px solid var(--wiki-border); text-align: left; vertical-align: top; }
+.wiki-table th { background: rgba(255,255,255,0.07); }
+.wiki-table tr:last-child td { border-bottom: 0; }
+.rarity-chip { display: inline-block; margin: 1px 2px; padding: 1px 6px; border: 1px solid currentColor; border-radius: 999px; font-size: 0.86em; font-weight: 800; line-height: 1.35; white-space: nowrap; }
+.rarity-common { background: var(--common-base); color: var(--common-display); }
+.rarity-uncommon { background: var(--uncommon-base); color: var(--uncommon-display); }
+.rarity-rare { background: var(--rare-base); color: var(--rare-display); }
+.rarity-epic { background: var(--epic-base); color: var(--epic-display); }
+.rarity-legendary { background: var(--legendary-base); color: var(--legendary-display); }
+.rarity-mythic { background: var(--mythic-base); color: var(--mythic-display); }
+.wiki-icon { width: 1.25em; height: 1.25em; object-fit: contain; vertical-align: -0.24em; }
+.wiki-footer { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--wiki-border); color: var(--wiki-muted); font-size: 0.92rem; }
+
+@media (max-width: 640px) {
+  body.wiki-page { padding: 16px 12px 36px; }
+  .wiki-wrap { padding: 18px 16px 20px; }
+  .wiki-wrap h1 { font-size: 1.8rem; }
+}
